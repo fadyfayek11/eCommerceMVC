@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+	<Resource Key="PP.Menu" Value="Menu" />
+	<Resource Key="PP.Message.Success" Value="تم!" />
+	<Resource Key="PP.Message.Warning" Value="تحذير!" />
+	<Resource Key="PP.Message.Error" Value="خطأ!" />
+	<Resource Key="PP.Message.Thanks" Value="شكرا" />
+	<Resource Key="PP.Message.GenericErrorMessage" Value="حدث خطأ." />
+	<Resource Key="PP.Message.OK" Value="تم" />
+	<Resource Key="PP.Header.SearchPlaceholder" Value="عم تبحث؟" />
+	<Resource Key="PP.Header.Menu.HiUser" Value="مرحبا {user}!" />
+	<Resource Key="PP.Header.Menu.Account" Value="الحساب" />
+	<Resource Key="PP.Header.Menu.Categories" Value="التصنيفات" />
+	<Resource Key="PP.Header.Menu.Home" Value="الصفحة الرئيسية" />
+	<Resource Key="PP.Header.Menu.Products" Value="منتجات" />
+	<Resource Key="PP.Header.Menu.Tracking" Value="تتبع الطرد" />
+	<Resource Key="PP.Header.Menu.Checkout" Value="الدفع" />
+	<Resource Key="PP.Header.Menu.ShoppingCart" Value="عربة التسوق" />
+	<Resource Key="PP.Header.Menu.Dashboard" Value="لوحة التحكم" />
+	<Resource Key="PP.Header.Menu.Profile" Value="الملف الشخصي" />
+	<Resource Key="PP.Header.Menu.LogOff" Value="تسجيل الخروج" />
+	<Resource Key="PP.Header.Menu.Login" Value="تسجيل الدخول" />
+	<Resource Key="PP.Footer.Information" Value="معلومات" />
+	<Resource Key="PP.Footer.Information.AboutUs" Value="حول" />
+	<Resource Key="PP.Footer.Information.ContactUs" Value="اتصل بنا" />
+	<Resource Key="PP.Footer.Information.PrivacyPolicy" Value="سياسة الخصوصية" />
+	<Resource Key="PP.Footer.Information.RefundPolicy" Value="سياسة الارجاع" />
+	<Resource Key="PP.Footer.Information.TermsAndConditions" Value="الأحكام والشروط" />
+	<Resource Key="PP.Footer.Account" Value="الحساب" />
+	<Resource Key="PP.Footer.Account.MyProfile" Value="ملفي" />
+	<Resource Key="PP.Footer.Account.MyOrders" Value="طلباتي" />
+	<Resource Key="PP.Footer.Account.TrackOrder" Value="تتبع الطرد" />
+	<Resource Key="PP.Footer.Account.MyCart" Value="السلة" />
+	<Resource Key="PP.Footer.Account.Checkout" Value="الدفع" />
+	<Resource Key="PP.Footer.NewsLetter" Value="اشترك في صحيفتنا الإخبارية" />
+	<Resource Key="PP.Footer.NewsLetter.GetOurEmailUpdates" Value="الحصول على تحديثات البريد الإلكتروني حول العروض الخاصة." />
+	<Resource Key="PP.Footer.NewsLetter.EnterYourEmailPlaceholder" Value="أدخل عنوان بريدك الالكتروني." />
+	<Resource Key="PP.Footer.NewsLetter.Subscribe" Value="الإشتراك" />
+	<Resource Key="PP.Footer.CopyrightsMessage" Value="{application} {date}. جميع الحقوق محفوظة." />
+	<Resource Key="PP.Shopping.AddToCart" Value="أضف إلى السلة" />
+	<Resource Key="PP.Shopping.ViewProduct" Value="عرض" />
+	<Resource Key="PP.Shopping.NoProductsInCart" Value="لا توجد منتجات في العربة." />
+	<Resource Key="PP.Shopping.CartTotal" Value="إجمالي العربة" />
+	<Resource Key="PP.Shopping.CartDetails" Value="تفاصيل العربة" />
+	<Resource Key="PP.Shopping.Checkout" Value="الدفع" />
+	<Resource Key="PP.Shopping.ItemAddingToCart" Value="جارِ إضافة المنتج إلى سلة التسوق" />
+	<Resource Key="PP.Shopping.ItemAddedToCart" Value="تمت الإضافة" />
+	<Resource Key="PP.Shopping.CartItemQuantityUpdated" Value="تم تعديل كمية المنتج" />
+	<Resource Key="PP.Shopping.ItemNotFound" Value="الصنف غير موجود." />
+	<Resource Key="PP.Home.Title" Value="موقع تجارة الأعمال" />
+	<Resource Key="PP.Home.Description" Value="b2b mahroum" />
+	<Resource Key="PP.Home.FeaturedCategories.BrowseCategoryProducts" Value="تصفح {category} المنتجات." />
+	<Resource Key="PP.Home.FeaturedCategories.DiscoverMoreProducts" Value="إكتشف أكثر" />
+	<Resource Key="PP.Home.FeaturedCategories.Products.Featured" Value="متميز" />
+	<Resource Key="PP.Home.SearchMoreProducts" Value="ابحث عن المزيد من المنتجات" />
+	<Resource Key="PP.Home.Showcase.FastDelivery" Value="توصيل سريع" />
+	<Resource Key="PP.Home.Showcase.OnTimeDelivery" Value="100٪ التسليم في الوقت المحدد" />
+	<Resource Key="PP.Home.Showcase.247Support" Value="دعم 24/7" />
+	<Resource Key="PP.Home.Showcase.AlwaysReadyToHelp" Value="دائما على استعداد للمساعدة" />
+	<Resource Key="PP.Home.Showcase.SecurePayments" Value="المدفوعات الآمنة" />
+	<Resource Key="PP.Home.Showcase.SecurePaymentOptions" Value="خيارات الدفع الآمنة" />
+	<Resource Key="PP.Home.Showcase.OurPartners" Value="شركاؤنا" />
+	<Resource Key="PP.Search.Title" Value="البحث المنتجات على {application}" />
+	<Resource Key="PP.Search.TitleWithCategory" Value="بحث {category} المنتجات على {application}" />
+	<Resource Key="PP.Search.Description" Value="b2b mahroum" />
+	<Resource Key="PP.Search.SearchProducts" Value="البحث عن المنتجات" />
+	<Resource Key="PP.Search.SearchProductsPlaceholder" Value="البحث عن المنتجات" />
+	<Resource Key="PP.Search.Categories" Value="التصنيفات" />
+	<Resource Key="PP.Search.Categories.AllCategories" Value="جميع الفئات" />
+	<Resource Key="PP.Search.PriceRange" Value="نطاق السعر" />
+	<Resource Key="PP.Search.Filter" Value="تخصيص البحث" />
+	<Resource Key="PP.Search.Reset" Value="إعادة تعيين" />
+	<Resource Key="PP.Search.SortBy" Value="الترتيب حسب: {sortby}" />
+	<Resource Key="PP.Search.SortBy.LatestProducts" Value="أحدث المنتجات" />
+	<Resource Key="PP.Search.SortBy.PriceLowToHigh" Value="السعر من الارخص الى الاعلى" />
+	<Resource Key="PP.Search.SortBy.PriceHighToLow" Value="السعر من الاعلى الى الادنى" />
+	<Resource Key="PP.Search.ShowNoOfProduct" Value="عرض {number} المنتجات" />
+	<Resource Key="PP.Search.ShowingProductRange" Value="عرض {startingIndex} إلى {endingIndex} من {total}" />
+	<Resource Key="PP.Search.Products.Featured" Value="منتج مميز" />
+	<Resource Key="PP.Search.ProductsNotFound" Value="آسف! لم يتم العثور على المنتجات." />
+	<Resource Key="PP.ProductDetails.AverageRatingCount" Value="متوسط ​​التقييم: {averageRating} نجوم من {totalComments} تعليقات" />
+	<Resource Key="PP.ProductDetails.ProductStockQuantity_1" Value="{quantity} متاح في المخزون." />
+	<Resource Key="PP.ProductDetails.Description" Value="وصف" />
+	<Resource Key="PP.ProductDetails.ProductSpecifications" Value="مواصفات المنتج" />
+	<Resource Key="PP.ProductDetails.Reviews" Value="التعليقات" />
+	<Resource Key="PP.ProductDetails.Comment" Value="تعليق" />
+	<Resource Key="PP.ProductDetails.Comments" Value="تعليقات" />
+	<Resource Key="PP.ProductDetails.UserRating" Value="التقييم: {commentRating}" />
+	<Resource Key="PP.ProductDetails.NoCommentsOnProduct" Value="لا توجد تعليقات على هذه المنتجات. كن أول من يعلق عليها." />
+	<Resource Key="PP.ProductDetails.LeaveComment" Value="اترك تعليقا" />
+	<Resource Key="PP.ProductDetails.YourRating" Value="تقييمك" />
+	<Resource Key="PP.ProductDetails.Star" Value="نجمة" />
+	<Resource Key="PP.ProductDetails.CommentPlaceholder" Value="اكتب تعليقاً " />
+	<Resource Key="PP.ProductDetails.LeaveYourComment" Value="اترك تعليقا" />
+	<Resource Key="PP.ProductDetails.LoginToComment" Value="تحتاج إلى تسجيل الدخول لترك تعليق." />
+	<Resource Key="PP.ProductDetails.Comments.Validations.TextRequired" Value="الرجاء إضافة تعليق صالح." />
+	<Resource Key="PP.ProductDetails.Comments.Validations.TextMinLength" Value="الحد الأدنى طول هو {min}." />
+	<Resource Key="PP.ProductDetails.Comments.Validations.TextMaxLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="PP.ProductDetails.Comments.Validations.EntityRequired" Value=" لم تحدد نوع التعليق " />
+	<Resource Key="PP.ProductDetails.Comments.Validations.RecordIDRequired" Value="تعليق السجل لم تحدد." />
+	<Resource Key="PP.ProductDetails.CommentDeleteWarning" Value="هل أنت متأكد أنك تريد حذف هذا التعليق؟" />
+	<Resource Key="PP.ProductDetails.CommentDeleteConfirm" Value="نعم، حذف!" />
+	<Resource Key="PP.ProductDetails.CommentDeleteCancel" Value="لا تحذف." />
+	<Resource Key="PP.ProductDetails.Comments.Validations.NotAuthorizedToDeleteComment" Value="لست مخولاً لتحذف " />
+	<Resource Key="PP.ProductDetails.Comments.Validations.UnableToDeleteComment" Value="غير قادر على حذف تعليق." />
+	<Resource Key="PP.ProductDetails.FeaturedProducts" Value="منتجات مميزة" />
+	<Resource Key="PP.ProductDetails.RelatedProducts" Value="منتجات ذات صله" />
+	<Resource Key="PP.ProductDetails.RelatedProductsFeatured" Value="متميز" />
+	<Resource Key="PP.Tracking.Title" Value="تتبع الطرد" />
+	<Resource Key="PP.Tracking.Description" Value="يمكنك التحقق من حالة طلبك. الرجاء إدخال رقم معرف النظام وستحصل على معلومات تتعلق طلبك." />
+	<Resource Key="PP.Tracking.OrderID" Value="رقم التعريف الخاص بالطلب" />
+	<Resource Key="PP.Tracking.OrderIDPlaceholder" Value="أدخل معرف طلب إلى التتبع" />
+	<Resource Key="PP.Tracking.TrackOrder" Value="تتبع" />
+	<Resource Key="PP.Tracking.OrderPlacedSuccessMessage" Value="شكرا جزيلا. وقد وضعت طلبك. يمكنك الوصول إلى تفاصيل طلبك في أي وقت في قسم الطلبات الخاصة بك في الملف الشخصي." />
+	<Resource Key="PP.Tracking.PrintInvoice" Value="طباعة الفاتورة" />
+	<Resource Key="PP.Tracking.OrderStatus" Value="حالة الطلب" />
+	<Resource Key="PP.Tracking.OrderStatus.Placed" Value="تم الطلب" />
+	<Resource Key="PP.Tracking.OrderStatus.Processing" Value="معالجة" />
+	<Resource Key="PP.Tracking.OrderStatus.Delivered" Value="تم التوصيل" />
+	<Resource Key="PP.Tracking.OrderStatus.Failed" Value="فشل" />
+	<Resource Key="PP.Tracking.OrderStatus.Cancelled" Value="ألغيت" />
+	<Resource Key="PP.Tracking.OrderStatus.OnHold" Value="في الانتظار" />
+	<Resource Key="PP.Tracking.OrderStatus.WaitingForPayment" Value="في انتظار الدفع" />
+	<Resource Key="PP.Tracking.OrderStatus.Refunded" Value="استرجاع" />
+	<Resource Key="PP.Tracking.PaymentMethod" Value="طريقة الدفع او السداد" />
+	<Resource Key="PP.Tracking.PaymentMethods.CreditCard" Value="بطاقة الائتمان" />
+	<Resource Key="PP.Tracking.PaymentMethods.PayPal" Value="باي بال" />
+	<Resource Key="PP.Tracking.PaymentMethods.CashOnDelivery" Value="الدفع عند الاستلام" />
+	<Resource Key="PP.Tracking.Date" Value="تاريخ" />
+	<Resource Key="PP.Tracking.UpdatedOn" Value="تحديث في" />
+	<Resource Key="PP.Tracking.OrderUniqueCode" Value="رقم هوية الطلب" />
+	<Resource Key="PP.Tracking.OrderDetails" Value="تفاصيل الطلب" />
+	<Resource Key="PP.Tracking.Item" Value="بند" />
+	<Resource Key="PP.Tracking.Price" Value="السعر" />
+	<Resource Key="PP.Tracking.Quantity" Value="كمية" />
+	<Resource Key="PP.Tracking.Total" Value="مجموع" />
+	<Resource Key="PP.Tracking.SubTotal" Value="المجموع الفرعي" />
+	<Resource Key="PP.Tracking.Discount" Value="خصم" />
+	<Resource Key="PP.Tracking.ShippingCharges" Value="رسوم الشحن" />
+	<Resource Key="PP.Tracking.DeliveryCharges" Value="رسوم التوصيل" />
+	<Resource Key="PP.Tracking.FinalTotal" Value="المجموع النهائي" />
+	<Resource Key="PP.Tracking.PromoApplied" Value="الترويجي التطبيقية {promocode}." />
+	<Resource Key="PP.Tracking.ContactDetails" Value="بيانات المتصل" />
+	<Resource Key="PP.Tracking.CustomerName" Value="اسم الزبون" />
+	<Resource Key="PP.Tracking.CustomerEmail" Value="العملاء البريد الإلكتروني" />
+	<Resource Key="PP.Tracking.CustomerPhone" Value="الهاتف العملاء" />
+	<Resource Key="PP.Tracking.GuestOrder" Value="ترتيب الضيوف" />
+	<Resource Key="PP.Tracking.ShippingDetails" Value="تفاصيل الشحن" />
+	<Resource Key="PP.Tracking.ShippingCountry" Value="الدولة" />
+	<Resource Key="PP.Tracking.ShippingCity" Value="المدينة" />
+	<Resource Key="PP.Tracking.ShippingAddress" Value="عنوان تفصيلي" />
+	<Resource Key="PP.Tracking.ShippingZipCode" Value="الرمز البريدي" />
+	<Resource Key="PP.Tracking.OrderHistory" Value="تاريخ الطلب" />
+	<Resource Key="PP.Tracking.OrderTrackingNotAccessible" Value="لا يمكنك استعراض تفاصيل هذا الطرد" />
+	<Resource Key="PP.Tracking.OrderCantBeTracked" Value="آسف! لا يمكننا تتبع تفاصيل طلبك." />
+	<Resource Key="PP.Cart.Title" Value="سلة التسوق الخاصة بك" />
+	<Resource Key="PP.Cart.Description" Value="تفاصيل سلة التسوق الخاصة بك." />
+	<Resource Key="PP.Cart.ItemImage" Value="صورة" />
+	<Resource Key="PP.Cart.ItemName" Value="المنتج" />
+	<Resource Key="PP.Cart.ItemPrice" Value="السعر" />
+	<Resource Key="PP.Cart.ItemQuantity" Value="الكمية" />
+	<Resource Key="PP.Cart.ItemTotal" Value="مجموع" />
+	<Resource Key="PP.Cart.RemoveItem" Value="إزالة المنتج" />
+	<Resource Key="PP.Cart.EnterPromoCode" Value="أدخل قسيمة / الرمز الترويجي" />
+	<Resource Key="PP.Cart.ApplyPromo" Value="تطبيق" />
+	<Resource Key="PP.Cart.PromoAppliedSuccessfully" Value="نجاح. تمتع بخصم من {discount}." />
+	<Resource Key="PP.Cart.PromoExpired" Value="آسف. انتهت صلاحية هذا العرض الترويجي / القسيمة." />
+	<Resource Key="PP.Cart.InvalidPromo" Value="عرض ترويجي صالح / قسيمة." />
+	<Resource Key="PP.Cart.UpdateCart" Value="تحديث العربة" />
+	<Resource Key="PP.Cart.ContinueShopping" Value="مواصلة التسوق" />
+	<Resource Key="PP.Cart.SubTotal" Value="المجموع الفرعي" />
+	<Resource Key="PP.Cart.Discount" Value="خصم" />
+	<Resource Key="PP.Cart.ShippingCharges" Value="رسوم الشحن" />
+	<Resource Key="PP.Cart.Total" Value="المجموع النهائي" />
+	<Resource Key="PP.Cart.ProceedToCheckout" Value="عملية التحقق للشراء" />
+	<Resource Key="PP.Checkout.Title" Value="الدفع" />
+	<Resource Key="PP.Checkout.Description" Value="التحقق للشراء مع المنتجات سلة التسوق الخاصة بك." />
+	<Resource Key="PP.Checkout.ContactDetails" Value="بيانات المتصل" />
+	<Resource Key="PP.Checkout.ShippingDetails" Value="تفاصيل الشحن" />
+	<Resource Key="PP.Checkout.Payment" Value="دفع" />
+	<Resource Key="PP.Checkout.YourOrder" Value="طلبك" />
+	<Resource Key="PP.Checkout.Product" Value="المنتج" />
+	<Resource Key="PP.Checkout.Total" Value="مجموع" />
+	<Resource Key="PP.Checkout.ItemQuantity" Value="كمية" />
+	<Resource Key="PP.Checkout.SubTotal" Value="المجموع الفرعي" />
+	<Resource Key="PP.Checkout.Discount" Value="خصم" />
+	<Resource Key="PP.Checkout.PromoApplied" Value="تم تطبيق الخصم : {promocode}" />
+	<Resource Key="PP.Checkout.HavePromoApplyHere" Value="هل لديك خصم ترويجي؟ قدم هنا." />
+	<Resource Key="PP.Checkout.ShippingCharges" Value="رسوم الشحن" />
+	<Resource Key="PP.Checkout.Total" Value="مجموع" />
+	<Resource Key="PP.Checkout.ModifyCartItemsHere" Value="تعديل البنود العربة هنا." />
+	<Resource Key="PP.Checkout.NoProductsInCart" Value="لا توجد منتجات في العربة. الرجاء إضافة بعض المنتجات في العربة." />
+	<Resource Key="PP.Checkout.FullName" Value="الاسم الكامل" />
+	<Resource Key="PP.Checkout.Email" Value="البريد الإلكتروني" />
+	<Resource Key="PP.Checkout.PhoneNumber" Value="رقم الهاتف" />
+	<Resource Key="PP.Checkout.CreateAccount" Value="انشئ حساب؟" />
+	<Resource Key="PP.Checkout.AlreadyHaveAccount" Value="هل لديك حساب؟ تسجيل الدخول." />
+	<Resource Key="PP.Checkout.CreateAccount.Validations.FullNameRequired" Value="الإسم الكامل ضروري." />
+	<Resource Key="PP.Checkout.CreateAccount.Validations.FullNameMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="PP.Checkout.CreateAccount.Validations.FullNameMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="PP.Checkout.CreateAccount.Validations.ProvideValidEmail" Value="تقديم عنوان بريد إلكتروني صحيح." />
+	<Resource Key="PP.Checkout.CreateAccount.Validations.EmailRequired" Value="البريد الالكتروني مطلوب" />
+	<Resource Key="PP.Checkout.Country" Value="الدولة" />
+	<Resource Key="PP.Checkout.City" Value="المدينة" />
+	<Resource Key="PP.Checkout.Address" Value="عنوان تفصيلي" />
+	<Resource Key="PP.Checkout.ZipCode" Value="الرمز البريدي" />
+	<Resource Key="PP.Checkout.Shipping.Validations.CountryRequired" Value="الدولة مطلوبة." />
+	<Resource Key="PP.Checkout.Shipping.Validations.CityRequired" Value="مطلوب المدينة." />
+	<Resource Key="PP.Checkout.Shipping.Validations.AddressRequired" Value="العنوان مطلوب." />
+	<Resource Key="PP.Checkout.Shipping.Validations.ZipCodeRequired" Value="الرمز البريدي مطلوب." />
+	<Resource Key="PP.Checkout.PayViaCreditCard" Value="الدفع عن طريق بطاقة الائتمان" />
+	<Resource Key="PP.Checkout.CardHolderName" Value="اسم حامل البطاقة" />
+	<Resource Key="PP.Checkout.CardNumber" Value="رقم البطاقة" />
+	<Resource Key="PP.Checkout.CardExpiryDate" Value="تاريخ انتهاء صلاحية البطاقة" />
+	<Resource Key="PP.Checkout.CardExpiryMonth" Value="شهر" />
+	<Resource Key="PP.Checkout.CardExpiryYear" Value="سنة" />
+	<Resource Key="PP.Checkout.CardCVC" Value="CVC" />
+	<Resource Key="PP.Checkout.CardInfoNotSaved" Value="تأكدوا أننا لا نخزن تفاصيل بطاقة الائتمان الخاصة بك على خوادمنا." />
+	<Resource Key="PP.Checkout.CardPayNow" Value="ادفع الآن" />
+	<Resource Key="PP.Checkout.CreditCard.Validations.CardHolderNameRequired" Value="اسم صاحب البطاقة مطلوب" />
+	<Resource Key="PP.Checkout.CreditCard.Validations.CardNumberRequired" Value="مطلوب رقم البطاقة." />
+	<Resource Key="PP.Checkout.CreditCard.Validations.CardNumberMustBeValid" Value="يجب أن يكون رقم بطاقة صالح." />
+	<Resource Key="PP.Checkout.CreditCard.Validations.CardExpiryMonthRequired" Value="مطلوب الشهر." />
+	<Resource Key="PP.Checkout.CreditCard.Validations.CardExpiryYearRequired" Value="مطلوب السنة." />
+	<Resource Key="PP.Checkout.CreditCard.Validations.CVCRequired" Value="مطلوب CVC" />
+	<Resource Key="PP.Checkout.CreditCard.Validations.CVCMustBeValid" Value="يجب أن يكون CVC رقم" />
+	<Resource Key="PP.Checkout.PayViaCashOnDelivery" Value="اضغط هنا للدفع عند الاستلام" />
+	<Resource Key="PP.Checkout.PlaceOrder" Value="الشراء الآن" />
+	<Resource Key="PP.Checkout.PayViaPayPal" Value="الدفع عن طريق PayPal" />
+	<Resource Key="PP.Checkout.PayPalAmountNote" Value="سوف تدفع '{amount}' في {currency} عبر PayPal." />
+	<Resource Key="PP.Checkout.PayPal.ConfirmOrderAgain" Value="أكد الطلب" />
+	<Resource Key="PP.Checkout.Validations.PayPalOrderIssue" Value="لم يتم العثور على تفاصيل طلب PayPal." />
+	<Resource Key="PP.Checkout.Validations.PleaseCompleteRequiredFields" Value="يرجى تعبئة الحقول المطلوبة." />
+	<Resource Key="PP.Checkout.OrderPlacedSuccessfully" Value="تم طلبك بنجاح." />
+	<Resource Key="PP.Register.Title" Value="تسجيل حساب" />
+	<Resource Key="PP.Register.Description" Value="تسجيل حسابك في {application}." />
+	<Resource Key="PP.Register.FullName" Value="الاسم الكامل" />
+	<Resource Key="PP.Register.FullNamePlaceholder" Value="الاسم الكامل" />
+	<Resource Key="PP.Register.Email" Value="البريد الإلكتروني" />
+	<Resource Key="PP.Register.EmailPlaceholder" Value="البريد الإلكتروني" />
+	<Resource Key="PP.Register.Username" Value="اسم المستخدم" />
+	<Resource Key="PP.Register.UsernamePlaceholder" Value="اسم المستخدم" />
+	<Resource Key="PP.Register.Password" Value="كلمه السر" />
+	<Resource Key="PP.Register.PasswordPlaceholder" Value="كلمه السر" />
+	<Resource Key="PP.Register.ConfirmPassword" Value="تأكيد كلمة المرور" />
+	<Resource Key="PP.Register.ConfirmPasswordPlaceholder" Value="تأكيد كلمة المرور" />
+	<Resource Key="PP.Register.RegisterAccount" Value="تسجيل" />
+	<Resource Key="PP.Register.LoginAccount" Value="أو الدخول مع حساب موجود" />
+	<Resource Key="PP.Register.Validation.FullNameRequired" Value="الإسم الكامل ضروري." />
+	<Resource Key="PP.Register.Validation.UsernameRequired" Value="اسم المستخدم مطلوب." />
+	<Resource Key="PP.Register.Validation.EmailRequired" Value="البريد الالكتروني مطلوب." />
+	<Resource Key="PP.Register.Validation.EmailFormat" Value="يرجى تقديم عنوان بريد إلكتروني صالح." />
+	<Resource Key="PP.Register.Validation.PasswordRequired" Value="كلمة المرور مطلوبة." />
+	<Resource Key="PP.Register.Validation.ConfirmPasswordRequired" Value="تأكيد كلمة المرور مطلوب." />
+	<Resource Key="PP.Register.Validation.PasswordNotMatched" Value="كلمة المرور وتأكيد كلمة المرور لا تتطابقان." />
+	<Resource Key="PP.Login.Title" Value="تسجيل الدخول" />
+	<Resource Key="PP.Login.Description" Value="تسجيل الدخول إلى حسابك على {application}." />
+	<Resource Key="PP.Login.Username" Value="اسم المستخدم" />
+	<Resource Key="PP.Login.UsernamePlaceholder" Value="اسم المستخدم" />
+	<Resource Key="PP.Login.Password" Value="كلمه السر" />
+	<Resource Key="PP.Login.PasswordPlaceholder" Value="كلمه السر" />
+	<Resource Key="PP.Login.RememberMe" Value="تذكرنى" />
+	<Resource Key="PP.Login.ForgotPassword" Value="نسيت رقمك السري؟" />
+	<Resource Key="PP.Login.LoginAccount" Value="تسجيل الدخول" />
+	<Resource Key="PP.Login.RegisterAccount" Value="أو تسجيل حساب جديد" />
+	<Resource Key="PP.Login.Validation.UsernameRequired" Value="الرجاء إدخال اسم المستخدم الخاص بك." />
+	<Resource Key="PP.Login.Validation.PasswordRequired" Value="الرجاء إدخال كلمة المرور الخاصة بك." />
+	<Resource Key="PP.Login.Validation.InvalidLoginAttempt" Value="محاولة تسجيل الدخول غير صالحة." />
+	<Resource Key="PP.Login.Validation.LockedOut" Value="الحساب موقوف، تواصل مع إدارة الموقع" />
+	<Resource Key="PP.ForgotPassword.Title" Value="هل نسيت كلمة المرور" />
+	<Resource Key="PP.ForgotPassword.Description" Value="استعادة حساب {application} الخاص بك." />
+	<Resource Key="PP.ForgotPassword.Username" Value="اسم المستخدم" />
+	<Resource Key="PP.ForgotPassword.UsernamePlaceholder" Value="اسم المستخدم" />
+	<Resource Key="PP.ForgotPassword.Validation.UsernameRequired" Value="اسم المستخدم مطلوب." />
+	<Resource Key="PP.ForgotPassword.RecoverAccount" Value="استعادة حساب" />
+	<Resource Key="PP.ForgotPassword.PasswordResetEmailSuccess" Value=" تم إرسال رابط إعادة تعيين كلمة المرور إلى البريد الإلكتروني الخاص بك." />
+	<Resource Key="PP.ResetPassword.Title" Value="إعادة تعيين كلمة المرور" />
+	<Resource Key="PP.ResetPassword.Description" Value="إعادة تعيين كلمة المرور لحسابك على {application}." />
+	<Resource Key="PP.ResetPassword.Password" Value="كلمه السر" />
+	<Resource Key="PP.ResetPassword.PasswordPlaceholder" Value="كلمه السر" />
+	<Resource Key="PP.ResetPassword.ConfirmPassword" Value="تأكيد كلمة المرور" />
+	<Resource Key="PP.ResetPassword.ConfirmPasswordPlaceholder" Value="تأكيد كلمة المرور" />
+	<Resource Key="PP.ResetPassword.ResetPassword" Value="إعادة تعيين كلمة المرور" />
+	<Resource Key="PP.ResetPassword.LoginAccount" Value="تسجيل الدخول إلى حسابك" />
+	<Resource Key="PP.ResetPassword.Validation.PasswordRequired" Value="كلمة المرور مطلوبة." />
+	<Resource Key="PP.ResetPassword.Validation.ConfirmPasswordRequired" Value="تأكيد كلمة المرور مطلوب." />
+	<Resource Key="PP.ResetPassword.Validation.PasswordNotMatched" Value="كلمة المرور وتأكيد كلمة المرور لا تتطابقان." />
+	<Resource Key="PP.UserProfile.Title" Value="ملف تعريفي للمستخدم" />
+	<Resource Key="PP.UserProfile.Description" Value="مراجعة ملف التعريف الخاص بك والبيانات ذات الصلة {application}." />
+	<Resource Key="PP.UserProfile.Username" Value="اسم المستخدم" />
+	<Resource Key="PP.UserProfile.Info" Value="معلومات" />
+	<Resource Key="PP.UserProfile.ChangePassword" Value="تغيير كلمة المرور" />
+	<Resource Key="PP.UserProfile.ChangeAvatar" Value="تغيير الصورة الشخصية" />
+	<Resource Key="PP.UserProfile.Orders" Value="الطلبات" />
+	<Resource Key="PP.UserProfile.Comments" Value="تعليقات" />
+	<Resource Key="PP.UserProfile.Info.FullName" Value="الاسم الكامل" />
+	<Resource Key="PP.UserProfile.Info.Email" Value="البريد الإلكتروني" />
+	<Resource Key="PP.UserProfile.Info.Username" Value="اسم المستخدم" />
+	<Resource Key="PP.UserProfile.Info.PhoneNumber" Value="رقم الهاتف" />
+	<Resource Key="PP.UserProfile.Info.Country" Value="الدولة" />
+	<Resource Key="PP.UserProfile.Info.City" Value="المدينة" />
+	<Resource Key="PP.UserProfile.Info.Address" Value="عنوان تفصيلي" />
+	<Resource Key="PP.UserProfile.Info.ZipCode" Value="الرمز البريدي" />
+	<Resource Key="PP.UserProfile.Info.UpdateInfo" Value="تحديث المعلومات" />
+	<Resource Key="PP.UserProfile.Info.UserInfoUpdated" Value="تم تحديث المعلومات بنجاح." />
+	<Resource Key="PP.UserProfile.Info.Validations.FullNameRequired" Value="الإسم الكامل ضروري." />
+	<Resource Key="PP.UserProfile.Info.Validations.FullNameMin" Value="الحد الأدنى طول هو {min}." />
+	<Resource Key="PP.UserProfile.Info.Validations.FullNameMax" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="PP.UserProfile.Info.Validations.EmailFormat" Value="يرجى تقديم عنوان بريد إلكتروني صالح." />
+	<Resource Key="PP.UserProfile.Info.Validations.EmailRequired" Value="مطلوب عنوان البريد الإلكتروني." />
+	<Resource Key="PP.UserProfile.Info.Validations.UsernameRequired" Value="اسم المستخدم مطلوب." />
+	<Resource Key="PP.UserProfile.Info.Validations.CountryRequired" Value="الدولة مطلوبة." />
+	<Resource Key="PP.UserProfile.Info.Validations.CityRequired" Value="مطلوب المدينة." />
+	<Resource Key="PP.UserProfile.Info.Validations.AddressRequired" Value="العنوان مطلوب." />
+	<Resource Key="PP.UserProfile.Info.Validations.ZipCodeRequired" Value="الرمز البريدي مطلوب." />
+	<Resource Key="PP.UserProfile.ChangePassword.CurrentPassword" Value="كلمة المرور الحالي" />
+	<Resource Key="PP.UserProfile.ChangePassword.NewPassword" Value="كلمة السر الجديدة" />
+	<Resource Key="PP.UserProfile.ChangePassword.ConfirmPassword" Value="تأكيد كلمة المرور" />
+	<Resource Key="PP.UserProfile.ChangePassword.UpdatePassword" Value="تحديث كلمة السر" />
+	<Resource Key="PP.UserProfile.ChangePassword.Validations.OldPasswordRequired" Value="مطلوب كلمة السر القديمة." />
+	<Resource Key="PP.UserProfile.ChangePassword.Validations.NewPasswordRequired" Value="مطلوب كلمة المرور الجديدة." />
+	<Resource Key="PP.UserProfile.ChangePassword.Validations.ConfirmPasswordRequired" Value="تأكيد كلمة المرور ." />
+	<Resource Key="PP.UserProfile.ChangePassword.Validations.PasswordsNotMatched" Value="كلمة المرور الجديدة وتأكيد كلمة المرور غير متطابقتان." />
+	<Resource Key="PP.UserProfile.ChangePassword.PasswordsUpdated" Value="تم تحديث كلمة السر بنجاح." />
+	<Resource Key="PP.UserProfile.ChangeAvatar.Avatar" Value="الصورة الرمزية" />
+	<Resource Key="PP.UserProfile.ChangeAvatar.SelectAvatar" Value="اختر الصورة الرمزية" />
+	<Resource Key="PP.UserProfile.ChangeAvatar.UpdateAvatar" Value="تحديث الصورة الرمزية" />
+	<Resource Key="PP.UserProfile.ChangeAvatar.AvatarUpdated" Value="تم بنجاح." />
+	<Resource Key="PP.UserProfile.ChangeAvatar.Validations.SelectAvatar" Value="يرجى تحديد صورة." />
+	<Resource Key="PP.UserProfile.UserOrders.OrderIDPlaceholder" Value="البحث عن طريق ترتيب ID" />
+	<Resource Key="PP.UserProfile.UserOrders.SelectByOrderStatus" Value="الاختيار عن طريق ترتيب أوضاع ..." />
+	<Resource Key="PP.UserProfile.UserOrders.OrderStatus.Placed" Value="وضعت" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderStatus.Processing" Value="معالجة" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderStatus.Delivered" Value="تم التوصيل" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderStatus.Failed" Value="فشل" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderStatus.Cancelled" Value="ألغيت" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderStatus.OnHold" Value="في الانتظار" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderStatus.WaitingForPayment" Value="في انتظار الدفع" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderStatus.Refunded" Value="ردها" />
+	<Resource Key="PP.UserProfile.UserOrders.SearchOrders" Value="بحث" />
+	<Resource Key="PP.UserProfile.UserOrders.Reset" Value="إعادة تعيين" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderID" Value="رقم التعريف الخاص بالطلب" />
+	<Resource Key="PP.UserProfile.UserOrders.PlacedOnDate" Value="تاريخ الطلب" />
+	<Resource Key="PP.UserProfile.UserOrders.OrderAmount" Value="كمية الطلب" />
+	<Resource Key="PP.UserProfile.UserOrders.Status" Value="الحالة" />
+	<Resource Key="PP.UserProfile.UserOrders.Actions" Value="إجراءات" />
+	<Resource Key="PP.UserProfile.UserOrders.UpdatedOn" Value="تم التعديل في" />
+	<Resource Key="PP.UserProfile.UserOrders.Track" Value="تتبع" />
+	<Resource Key="PP.UserProfile.UserOrders.Previous" Value="السابق" />
+	<Resource Key="PP.UserProfile.UserOrders.Next" Value="التالى" />
+	<Resource Key="PP.UserProfile.UserOrders.NoOrdersFound" Value="لم يتم العثور على أية طلبات." />
+	<Resource Key="PP.UserProfile.UserComments.SearchCommentsPlaceholder" Value="بحث في التعليقات" />
+	<Resource Key="PP.UserProfile.UserComments.SearchComments" Value="بحث" />
+	<Resource Key="PP.UserProfile.UserComments.Reset" Value="إعادة تعيين" />
+	<Resource Key="PP.UserProfile.UserComments.CommentUserName" Value="{user}" />
+	<Resource Key="PP.UserProfile.UserComments.CommentTimestamp" Value="{datetime}" />
+	<Resource Key="PP.UserProfile.UserComments.DeleteComment" Value="حذف تعليق" />
+	<Resource Key="PP.UserProfile.UserComments.CommentDeleteWarning" Value="هل أنت متأكد أنك تريد حذف هذا التعليق؟" />
+	<Resource Key="PP.UserProfile.UserComments.CommentDeleteConfirm" Value="نعم، حذفه!" />
+	<Resource Key="PP.UserProfile.UserComments.CommentDeleteCancel" Value="لا، لا أميل حذف." />
+	<Resource Key="PP.UserProfile.UserComments.Previous" Value="السابق" />
+	<Resource Key="PP.UserProfile.UserComments.Next" Value="التالى" />
+	<Resource Key="PP.UserProfile.UserComments.NoCommentsFound" Value="لا توجد تعليقات." />
+	<Resource Key="PP.PrintInvoice.Title" Value="طباعة أمر فاتورة: {orderid}" />
+	<Resource Key="PP.PrintInvoice.Description" Value="طباعة فاتورة لطلبك." />
+	<Resource Key="PP.PrintInvoice.OrderID" Value="رقم الطلب" />
+	<Resource Key="PP.PrintInvoice.Dated" Value="بتاريخ" />
+	<Resource Key="PP.PrintInvoice.Status" Value="الحالة" />
+	<Resource Key="PP.PrintInvoice.CustomerInformation" Value="معلومات الزبون" />
+	<Resource Key="PP.PrintInvoice.PaymentDetails" Value="بيانات الدفع" />
+	<Resource Key="PP.PrintInvoice.PaymentMethod" Value="طريقة الدفع او السداد" />
+	<Resource Key="PP.PrintInvoice.TransactionID" Value="رقم المعاملة" />
+	<Resource Key="PP.PrintInvoice.Code" Value="كود الطرد" />
+	<Resource Key="PP.PrintInvoice.Product" Value="المنتج" />
+	<Resource Key="PP.PrintInvoice.Price" Value="السعر" />
+	<Resource Key="PP.PrintInvoice.Quantity" Value="كمية" />
+	<Resource Key="PP.PrintInvoice.Total" Value="مجموع" />
+	<Resource Key="PP.PrintInvoice.PromoApplied" Value="الترويجي التطبيقية: {promo}" />
+	<Resource Key="PP.PrintInvoice.TotalAmount" Value="المبلغ الإجمالي" />
+	<Resource Key="PP.PrintInvoice.Discount" Value="خصم" />
+	<Resource Key="PP.PrintInvoice.ShippingCharges" Value="الشحن" />
+	<Resource Key="PP.PrintInvoice.FinalAmount" Value="القيمة النهائية" />
+	<Resource Key="PP.PrintInvoice.GuestOrder" Value="طلب بدون تسجيل حساب" />
+	<Resource Key="PP.PrintInvoice.NotAccessible" Value="آسف! لا يمكنك التحقق من ذلك تفاصيل النظام." />
+	<Resource Key="Dashboard.Dashboard" Value="لوحة التحكم" />
+	<Resource Key="Dashboard.Commons.RecordNotSpecifiedInCurrentLanguage" Value="لم يتم تحديد هذا السجل في اللغة الحالية." />
+	<Resource Key="Dashboard.Commons.ParentCategoryRecordNotSpecifiedInCurrentLanguage" Value="الأم الفئة غير محددة في اللغة الحالية." />
+	<Resource Key="Dashboard.Commons.CategoryRecordNotSpecifiedInCurrentLanguage" Value="لم يتم تحديد هذا الاسم الفئة في اللغة الحالية." />
+	<Resource Key="Dashboard.Message.Success" Value="نجاح!" />
+	<Resource Key="Dashboard.Message.Warning" Value="تحذير!" />
+	<Resource Key="Dashboard.Message.Error" Value="خطأ!" />
+	<Resource Key="Dashboard.Message.Thanks" Value="شكرا" />
+	<Resource Key="Dashboard.Message.GenericErrorMessage" Value="حدث خطأ." />
+	<Resource Key="Dashboard.Message.ConfirmDeleteWarning" Value="هل أنت متأكد أنك تريد حذف هذا السجل؟" />
+	<Resource Key="Dashboard.Message.ConfirmDelete" Value="تأكيد" />
+	<Resource Key="Dashboard.Message.CancelDelete" Value="إلغاء" />
+	<Resource Key="Dashboard.Message.OK" Value="حسنا" />
+	<Resource Key="Dashboard.Pagination.Previous" Value="السابق" />
+	<Resource Key="Dashboard.Pagination.Next" Value="التالى" />
+	<Resource Key="Dashboard.Menu.Home" Value="الصفحة الرئيسية" />
+	<Resource Key="Dashboard.Menu.Dashboard" Value="لوحة التحكم" />
+	<Resource Key="Dashboard.Menu.Categories" Value="التصنيفات" />
+	<Resource Key="Dashboard.Menu.Products" Value="منتجات" />
+	<Resource Key="Dashboard.Menu.Promos" Value="العروض الترويجية" />
+	<Resource Key="Dashboard.Menu.Orders" Value="الطلبات" />
+	<Resource Key="Dashboard.Menu.Comments" Value="تعليقات" />
+	<Resource Key="Dashboard.Menu.Users" Value="المستخدمين" />
+	<Resource Key="Dashboard.Menu.Roles" Value="الأدوار" />
+	<Resource Key="Dashboard.Menu.Languages" Value="اللغات" />
+	<Resource Key="Dashboard.Menu.Configurations" Value="الاعدادات" />
+	<Resource Key="Dashboard.Menu.AllConfigurations" Value="جميع الاعدادات" />
+	<Resource Key="Dashboard.Menu.LanguageConfigurations" Value="اعدادات اللغة" />
+	<Resource Key="Dashboard.Menu.NewsletterSubscribers" Value="مشتركي النشرة الإخبارية" />
+	<Resource Key="Dashboard.TopMenu.Profile" Value="الملف الشخصي" />
+	<Resource Key="Dashboard.TopMenu.LogOff" Value="تسجيل الخروج" />
+	<Resource Key="Dashboard.Dashboard.Hello" Value="مرحبا {user}!" />
+	<Resource Key="Dashboard.Dashboard.WelcomeToDashboard" Value="مرحبا بكم في {application} لوحة التحكم" />
+	<Resource Key="Dashboard.Dashboard.LowStockAlert" Value="الكمية المتبقية من {product-link} هي {product-quantity} وهي أقل من مستوى تنبيه المخزون {stock-alert-level}." />
+	<Resource Key="Dashboard.Dashboard.TotalProducts" Value="عدد المنتجات" />
+	<Resource Key="Dashboard.Dashboard.TotalCategories" Value="عدد الأقسام" />
+	<Resource Key="Dashboard.Dashboard.TotalOrders" Value="مجموع الطلبات" />
+	<Resource Key="Dashboard.Dashboard.TotalComments" Value="مجموع التعليقات" />
+	<Resource Key="Dashboard.Dashboard.NoOfUsers" Value="عدد المستخدمين" />
+	<Resource Key="Dashboard.Dashboard.NoOfRoles" Value="عدد الأدوار" />
+	<Resource Key="Dashboard.Categories.Title" Value="التصنيفات" />
+	<Resource Key="Dashboard.Categories.Description" Value="قائمة الفئات" />
+	<Resource Key="Dashboard.Categories.SearchPlaceholder" Value="البحث عن طريق اسم الفئة" />
+	<Resource Key="Dashboard.Categories.SelectParentCategory" Value="حدد فئات من الفئة الرئيسية" />
+	<Resource Key="Dashboard.Categories.Search" Value="بحث" />
+	<Resource Key="Dashboard.Categories.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Categories.CreateCategory" Value="إنشاء الفئة" />
+	<Resource Key="Dashboard.Categories.List.Name" Value="اسم" />
+	<Resource Key="Dashboard.Categories.List.ParentCategory" Value="الفئة الرئيسية" />
+	<Resource Key="Dashboard.Categories.List.Description" Value="وصف" />
+	<Resource Key="Dashboard.Categories.List.Products" Value="منتجات" />
+	<Resource Key="Dashboard.Categories.List.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.Categories.List.FeaturedCategory" Value="فئة مميزة" />
+	<Resource Key="Dashboard.Categories.List.Edit" Value="تعديل" />
+	<Resource Key="Dashboard.Categories.List.Delete" Value="حذف" />
+	<Resource Key="Dashboard.Categories.List.NoRecordFound" Value="لا توجد فئات." />
+	<Resource Key="Dashboard.Categories.EditCategoryTitle" Value="تحرير الفئة" />
+	<Resource Key="Dashboard.Categories.EditCategoryDescription" Value="فئة تحرير." />
+	<Resource Key="Dashboard.Categories.CreateCategoryTitle" Value="إنشاء الفئة" />
+	<Resource Key="Dashboard.Categories.CreateCategoryDescription" Value="إنشاء فئة جديدة." />
+	<Resource Key="Dashboard.Categories.Action.Name" Value="اسم" />
+	<Resource Key="Dashboard.Categories.Action.NamePlaceholder" Value="اسم التصنيف" />
+	<Resource Key="Dashboard.Categories.Action.Summary" Value="ملخص" />
+	<Resource Key="Dashboard.Categories.Action.SummaryPlaceholder" Value="إضافة موجز الفئة." />
+	<Resource Key="Dashboard.Categories.Action.Description" Value="وصف" />
+	<Resource Key="Dashboard.Categories.Action.DescriptionPlaceholder" Value="إضافة فئة الوصف." />
+	<Resource Key="Dashboard.Categories.Action.ParentCategory" Value="القسم الرئيسي" />
+	<Resource Key="Dashboard.Categories.Action.ParentCategoryNone" Value="لا شيء" />
+	<Resource Key="Dashboard.Categories.Action.URL" Value="URL" />
+	<Resource Key="Dashboard.Categories.Action.SelectPicture" Value="تحديد صورة" />
+	<Resource Key="Dashboard.Categories.Action.Featured" Value="الفئة المميز" />
+	<Resource Key="Dashboard.Categories.Update" Value="تحديث" />
+	<Resource Key="Dashboard.Categories.Delete" Value="حذف" />
+	<Resource Key="Dashboard.Categories.Save" Value="حفظ" />
+	<Resource Key="Dashboard.Categories.Cancel" Value="إلغاء" />
+	<Resource Key="Dashboard.Categories.Action.Validation.NameRequired" Value="مطلوب اسم الفئة." />
+	<Resource Key="Dashboard.Categories.Action.Validation.NameMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="Dashboard.Categories.Action.Validation.NameMaximumLength" Value="الحد أقصى للطول هو {max}." />
+	<Resource Key="Dashboard.Categories.Action.Validation.DescriptionMinimumLength" Value="الحد الأدنى طول هو {min}." />
+	<Resource Key="Dashboard.Categories.Action.Validation.CategoryNotFound" Value="فئة غير موجود." />
+	<Resource Key="Dashboard.Categories.Action.Validation.UnableToUpdateCategory" Value="غير قادر على تحديث الفئة." />
+	<Resource Key="Dashboard.Categories.Action.Validation.UnableToUpdateCategoryRecord" Value="غير قادر على تحديث الفئة" />
+	<Resource Key="Dashboard.Categories.Action.Validation.UnableToCreateCategory" Value="غير قادر على إنشاء الفئة." />
+	<Resource Key="Dashboard.Categories.Action.Validation.UnableToDeleteCategory" Value="غير قادر على حذف الفئة." />
+	<Resource Key="Dashboard.Products.Title" Value="منتجات" />
+	<Resource Key="Dashboard.Products.Description" Value="قائمة المنتجات" />
+	<Resource Key="Dashboard.Products.SearchPlaceholder" Value="ابحث عن منتجات حسب الاسم" />
+	<Resource Key="Dashboard.Products.SelectByCategory" Value="الاختيار عن طريق القطاع" />
+	<Resource Key="Dashboard.Products.Search" Value="بحث" />
+	<Resource Key="Dashboard.Products.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Products.CreateProduct" Value="إنشاء" />
+	<Resource Key="Dashboard.Products.ShowOnlyLowStock" Value="إظهار المخزونات المنخفضة فقط" />
+	<Resource Key="Dashboard.Products.List.Name" Value="اسم" />
+	<Resource Key="Dashboard.Products.List.Category" Value="الفئة" />
+	<Resource Key="Dashboard.Products.List.Summary" Value="ملخص" />
+	<Resource Key="Dashboard.Products.List.Price" Value="السعر" />
+	<Resource Key="Dashboard.Products.List.StockQuantity" Value="كمية المخزون" />
+	<Resource Key="Dashboard.Products.List.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.Products.List.FeaturedProduct" Value="منتج مميز" />
+	<Resource Key="Dashboard.Products.Edit" Value="تعديل" />
+	<Resource Key="Dashboard.Products.Delete" Value="حذف" />
+	<Resource Key="Dashboard.Products.List.NoRecordFound" Value="لا توجد منتجات." />
+	<Resource Key="Dashboard.Products.EditProductTitle" Value="تحرير المنتج" />
+	<Resource Key="Dashboard.Products.EditProductDescription" Value="تحرير المنتج." />
+	<Resource Key="Dashboard.Products.CreateProductTitle" Value="إنشاء المنتج" />
+	<Resource Key="Dashboard.Products.CreateProductDescription" Value="انشاء منتج جديد." />
+	<Resource Key="Dashboard.Products.Action.Name" Value="اسم" />
+	<Resource Key="Dashboard.Products.Action.NamePlaceholder" Value="اسم المنتج" />
+	<Resource Key="Dashboard.Products.Action.Summary" Value="ملخص" />
+	<Resource Key="Dashboard.Products.Action.SummaryPlaceholder" Value="إضافة ملخص المنتج" />
+	<Resource Key="Dashboard.Products.Action.Description" Value="وصف" />
+	<Resource Key="Dashboard.Products.Action.DescriptionPlaceholder" Value="إضافة وصف المنتج" />
+	<Resource Key="Dashboard.Products.Action.ProductSpecifications" Value="مواصفات المنتج" />
+	<Resource Key="Dashboard.Products.Action.SpecificationTitle" Value="مواصفات عنوان" />
+	<Resource Key="Dashboard.Products.Action.SpecificationValue" Value="مواصفات القيمة" />
+	<Resource Key="Dashboard.Products.Action.AddSpecification" Value="إضافة مواصفات" />
+	<Resource Key="Dashboard.Products.Action.SpecificationAction" Value="إجراءات" />
+	<Resource Key="Dashboard.Products.Action.SpecificationDelete" Value="حذف" />
+	<Resource Key="Dashboard.Products.Action.NoSpecifications" Value="لا مواصفات." />
+	<Resource Key="Dashboard.Products.Action.Category" Value="الفئة" />
+	<Resource Key="Dashboard.Products.Action.Price" Value="السعر" />
+	<Resource Key="Dashboard.Products.Action.PricePlaceholder" Value="سعر المنتج" />
+	<Resource Key="Dashboard.Products.Action.SelectPictures" Value="اختر صور" />
+	<Resource Key="Dashboard.Products.Action.SetThumbnailImage" Value="إضافة إلى الصورة المصغرة" />
+	<Resource Key="Dashboard.Products.Action.RemovePicture" Value="إزالة الصورة" />
+	<Resource Key="Dashboard.Products.Action.FeaturedProduct" Value="المنتج المميز" />
+	<Resource Key="Dashboard.Products.Update" Value="تحديث" />
+	<Resource Key="Dashboard.Products.Delete" Value="حذف" />
+	<Resource Key="Dashboard.Products.Save" Value="حفظ" />
+	<Resource Key="Dashboard.Products.Cancel" Value="إلغاء" />
+	<Resource Key="Dashboard.Products.Action.Validation.NameRequired" Value="مطلوب اسم المنتج." />
+	<Resource Key="Dashboard.Products.Action.Validation.NameMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="Dashboard.Products.Action.Validation.NameMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.Products.Action.Validation.CategoryRequired" Value="إختر فئة المنتج." />
+	<Resource Key="Dashboard.Products.Action.Validation.SummaryRequired" Value="مطلوب ملخص المنتج." />
+	<Resource Key="Dashboard.Products.Action.Validation.SummaryMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="Dashboard.Products.Action.Validation.SummaryMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.Products.Action.Validation.DescriptionRequired" Value="مطلوب الوصف." />
+	<Resource Key="Dashboard.Products.Action.Validation.DescriptionMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="Dashboard.Products.Action.Validation.PriceRequired" Value="مطلوب السعر." />
+	<Resource Key="Dashboard.Products.Action.Validation.PriceRange" Value="يجب أن يكون السعر بين {min} إلى {max}." />
+	<Resource Key="Dashboard.Products.Action.Validation.ProductPicturesRequired" Value="يرجى تحميل صورة واحدة على الأقل." />
+	<Resource Key="Dashboard.Products.Action.Validation.ProductNotFound" Value="الصنف غير موجود." />
+	<Resource Key="Dashboard.Products.Action.Validation.UnableToUpdateProduct" Value="غير قادر على تحديث المنتج." />
+	<Resource Key="Dashboard.Products.Action.Validation.UnableToUpdateProductRecord" Value="غير قادر على تحديث سجل المنتج." />
+	<Resource Key="Dashboard.Products.Action.Validation.UnableToCreateProduct" Value="غير قادر على إنشاء المنتج." />
+	<Resource Key="Dashboard.Products.Action.Validation.UnableToCreateProductRecord" Value="غير قادر على إنشاء سجل المنتج." />
+	<Resource Key="Dashboard.Products.Action.Validation.UnableToDeleteProduct" Value="غير قادر على حذف المنتج." />
+	<Resource Key="Dashboard.Promos.Title" Value="العروض" />
+	<Resource Key="Dashboard.Promos.Description" Value="قائمة العروض." />
+	<Resource Key="Dashboard.Promos.SearchPlaceholder" Value="البحث الترويجي" />
+	<Resource Key="Dashboard.Promos.Search" Value="بحث" />
+	<Resource Key="Dashboard.Promos.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Promos.CreatePromo" Value="إنشاء عرض ترويجي" />
+	<Resource Key="Dashboard.Promos.List.Name" Value="اسم" />
+	<Resource Key="Dashboard.Promos.List.Code" Value="رمز ترويجي" />
+	<Resource Key="Dashboard.Promos.List.PromoType" Value="النوع" />
+	<Resource Key="Dashboard.Promos.List.Value" Value="القيمة" />
+	<Resource Key="Dashboard.Promos.List.ValidTill" Value="صالح لغاية" />
+	<Resource Key="Dashboard.Promos.List.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.Promos.List.NoRecordFound" Value="لم يتم العثور على أي عرض ترويجي ." />
+	<Resource Key="Dashboard.Promos.PromoTypes" Value="أنواع العروض الترويجية" />
+	<Resource Key="Dashboard.Promos.PromoTypes.Percentage" Value="النسبة المئوية" />
+	<Resource Key="Dashboard.Promos.PromoTypes.Amount" Value="كمية" />
+	<Resource Key="Dashboard.Promos.Edit" Value="تعديل" />
+	<Resource Key="Dashboard.Promos.Delete" Value="حذف" />
+	<Resource Key="Dashboard.Promos.EditPromoTitle" Value="تحرير العرض الترويجي" />
+	<Resource Key="Dashboard.Promos.EditPromoDescription" Value="تحرير العرض الترويجي." />
+	<Resource Key="Dashboard.Promos.CreatePromoTitle" Value="إنشاء العرض الترويجي" />
+	<Resource Key="Dashboard.Promos.CreatePromoDescription" Value="إنشاء عرض ترويجي جديد." />
+	<Resource Key="Dashboard.Promos.Action.Name" Value="اسم" />
+	<Resource Key="Dashboard.Promos.Action.NamePlaceholder" Value="إضافة اسم العرض الترويجي" />
+	<Resource Key="Dashboard.Promos.Action.Description" Value="وصف" />
+	<Resource Key="Dashboard.Promos.Action.DescriptionPlaceholder" Value="إضافة وصف حول العرض الترويجي." />
+	<Resource Key="Dashboard.Promos.Action.Code" Value="الرمز" />
+	<Resource Key="Dashboard.Promos.Action.CodePlaceholder" Value="إضافة الرمز الترويجي" />
+	<Resource Key="Dashboard.Promos.Action.PromoType" Value="النوع" />
+	<Resource Key="Dashboard.Promos.Action.AmountPromoDescription" Value="مبلغ الخصم لقسيمة الشراء" />
+	<Resource Key="Dashboard.Promos.Action.PercentagePromoDescription" Value="نسبة الخصم قسيمة الشراء" />
+	<Resource Key="Dashboard.Promos.Action.Value" Value="القيمة" />
+	<Resource Key="Dashboard.Promos.Action.ValidTill" Value="صالح لغاية" />
+	<Resource Key="Dashboard.Promos.Update" Value="تحديث" />
+	<Resource Key="Dashboard.Promos.Delete" Value="حذف" />
+	<Resource Key="Dashboard.Promos.Save" Value="حفظ" />
+	<Resource Key="Dashboard.Promos.Cancel" Value="إلغاء" />
+	<Resource Key="Dashboard.Promos.Action.Validation.NameRequired" Value="مطلوب اسم." />
+	<Resource Key="Dashboard.Promos.Action.Validation.NameMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="Dashboard.Promos.Action.Validation.NameMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.Promos.Action.Validation.PromoTypeRequired" Value="يرجى تحديد نوع العرض الترويجي." />
+	<Resource Key="Dashboard.Promos.Action.Validation.DescriptionMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="Dashboard.Promos.Action.Validation.CodeRequired" Value="مطلوب الرمز الترويجي." />
+	<Resource Key="Dashboard.Promos.Action.Validation.CodeMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="Dashboard.Promos.Action.Validation.CodeMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.Promos.Action.Validation.ValueRequired" Value="مطلوب قيمة العرض الترويجي." />
+	<Resource Key="Dashboard.Promos.Action.Validation.ValueRange" Value="يجب أن تكون القيمة بين {min} إلى {max}." />
+	<Resource Key="Dashboard.Promos.Action.Validation.PromoNotFound" Value="العرض الترويجي غير موجود." />
+	<Resource Key="Dashboard.Promos.Action.Validation.UnableToUpdatePromo" Value="غير قادر على تحديث العرض الترويجي." />
+	<Resource Key="Dashboard.Promos.Action.Validation.UnableToCreatePromo" Value="غير قادر على إنشاء العرض الترويجي." />
+	<Resource Key="Dashboard.Promos.Action.Validation.UnableToDeletePromo" Value="غير قادر على حذف العرض الترويجي." />
+	<Resource Key="Dashboard.Orders.Title" Value="الطلبات" />
+	<Resource Key="Dashboard.Orders.Description" Value="أوامر القائمة" />
+	<Resource Key="Dashboard.Orders.SearchByUserIDPlaceholder" Value="البحث عن طريق اسم العضو" />
+	<Resource Key="Dashboard.Orders.SearchByOrderIDPlaceholder" Value="البحث عن طريق ترتيب ID" />
+	<Resource Key="Dashboard.Orders.SearchByOrderStatus" Value="البحث عن طريق ترتيب الحالة" />
+	<Resource Key="Dashboard.Orders.OrderStatus" Value="حالة الطلب" />
+	<Resource Key="Dashboard.Orders.OrderStatus.Placed" Value="تم" />
+	<Resource Key="Dashboard.Orders.OrderStatus.Processing" Value="معالجة" />
+	<Resource Key="Dashboard.Orders.OrderStatus.Delivered" Value="تم التوصيل" />
+	<Resource Key="Dashboard.Orders.OrderStatus.Failed" Value="فشل" />
+	<Resource Key="Dashboard.Orders.OrderStatus.Cancelled" Value="ألغيت" />
+	<Resource Key="Dashboard.Orders.OrderStatus.OnHold" Value="في الانتظار" />
+	<Resource Key="Dashboard.Orders.OrderStatus.WaitingForPayment" Value="في انتظار الدفع" />
+	<Resource Key="Dashboard.Orders.OrderStatus.Refunded" Value="ارجاع" />
+	<Resource Key="Dashboard.Orders.Search" Value="بحث" />
+	<Resource Key="Dashboard.Orders.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Orders.List.OrderID" Value="رقم التعريف الخاص بالطلب" />
+	<Resource Key="Dashboard.Orders.List.PlacedOn" Value="تم الطلب بتاريخ" />
+	<Resource Key="Dashboard.Orders.List.OrderAmount" Value="كمية الطلب" />
+	<Resource Key="Dashboard.Orders.List.PaymentMethod" Value="طريقة الدفع او السداد" />
+	<Resource Key="Dashboard.Orders.List.Status" Value="الحالة" />
+	<Resource Key="Dashboard.Orders.List.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.Orders.List.UpdatedOn" Value="تحديث في" />
+	<Resource Key="Dashboard.Orders.List.Details" Value="تفاصيل" />
+	<Resource Key="Dashboard.Orders.List.Track" Value="تتبع" />
+	<Resource Key="Dashboard.Orders.List.Invoice" Value="فاتورة" />
+	<Resource Key="Dashboard.Orders.NoOrdersFound" Value="لم يتم العثور على أية طلبات." />
+	<Resource Key="Dashboard.OrderDetails.Title" Value="الطلبات" />
+	<Resource Key="Dashboard.OrderDetails.Description" Value="أوامر قائمة" />
+	<Resource Key="Dashboard.OrderDetails.PrintInvoice" Value="فاتورة طباعة" />
+	<Resource Key="Dashboard.OrderDetails.OrderStatus" Value="حالة الطلب" />
+	<Resource Key="Dashboard.OrderDetails.PaymentMethod" Value="طريقة الدفع او السداد" />
+	<Resource Key="Dashboard.OrderDetails.PaymentMethods.CreditCard" Value="بطاقة الائتمان" />
+	<Resource Key="Dashboard.OrderDetails.PaymentMethods.PayPal" Value="باي بال" />
+	<Resource Key="Dashboard.OrderDetails.PaymentMethods.CashOnDelivery" Value="الدفع عند الاستلام" />
+	<Resource Key="Dashboard.OrderDetails.OrderTransactionID" Value="رقم التحويل" />
+	<Resource Key="Dashboard.OrderDetails.OrderProcessor.AuthorizeNet" Value="Authorize.Net" />
+	<Resource Key="Dashboard.OrderDetails.OrderProcessor.PayPal" Value="PayPal" />
+	<Resource Key="Dashboard.OrderDetails.PlacedOn" Value="تمت بتاريخ" />
+	<Resource Key="Dashboard.OrderDetails.UpdatedOn" Value="تحديث في" />
+	<Resource Key="Dashboard.OrderDetails.OrderID" Value="رقم التعريف الخاص بالطلب" />
+	<Resource Key="Dashboard.OrderDetails.OrderUniqueCode" Value="ترتيب مدونة فريدة من نوعها" />
+	<Resource Key="Dashboard.OrderDetails.OrderDetails" Value="تفاصيل الطلب" />
+	<Resource Key="Dashboard.OrderDetails.Name" Value="اسم" />
+	<Resource Key="Dashboard.OrderDetails.Price" Value="السعر" />
+	<Resource Key="Dashboard.OrderDetails.Quantity" Value="كمية" />
+	<Resource Key="Dashboard.OrderDetails.Total" Value="مجموع" />
+	<Resource Key="Dashboard.OrderDetails.TotalAmount" Value="المبلغ الإجمالي" />
+	<Resource Key="Dashboard.OrderDetails.Discount" Value="خصم" />
+	<Resource Key="Dashboard.OrderDetails.PromoApplied" Value="الترويجي التطبيقية: {promo}" />
+	<Resource Key="Dashboard.OrderDetails.DeliveryCharges" Value="رسوم التوصيل" />
+	<Resource Key="Dashboard.OrderDetails.CustomerDetails" Value="تفاصيل العميل" />
+	<Resource Key="Dashboard.OrderDetails.FullName" Value="الاسم الكامل" />
+	<Resource Key="Dashboard.OrderDetails.Email" Value="البريد الإلكتروني" />
+	<Resource Key="Dashboard.OrderDetails.PhoneNumber" Value="رقم الهاتف" />
+	<Resource Key="Dashboard.OrderDetails.ShippingDetails" Value="تفاصيل الشحن" />
+	<Resource Key="Dashboard.OrderDetails.Country" Value="الدولة" />
+	<Resource Key="Dashboard.OrderDetails.City" Value="المدينة" />
+	<Resource Key="Dashboard.OrderDetails.Address" Value="عنوان تفصيلي" />
+	<Resource Key="Dashboard.OrderDetails.ZipCode" Value="الرمز البريدي" />
+	<Resource Key="Dashboard.OrderDetails.OrderHistory" Value="تاريخ الطلب" />
+	<Resource Key="Dashboard.OrderDetails.Note" Value="ملحوظة" />
+	<Resource Key="Dashboard.OrderDetails.UpdateStatus" Value="تحديث الحالة" />
+	<Resource Key="Dashboard.OrderDetails.UpdateStatus.Validation.NoteRequired" Value="ادخال الملاحظة مطلوب" />
+	<Resource Key="Dashboard.OrderDetails.UpdateStatus.Validation.NoteMinimumLength" Value="الحد الأدنى للطول هو {min}." />
+	<Resource Key="Dashboard.OrderDetails.UpdateStatus.Validation.NoteMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.OrderDetails.UpdateStatus.Validation.UnableToUpdateOrderStatus" Value="بيانات غير صالحة. غير قادر على تحديث حالة الطلب." />
+	<Resource Key="Dashboard.OrderDetails.GuestOrder" Value="ترتيب الضيوف" />
+	<Resource Key="Dashboard.OrderDetails.SeeAllOrdersFromCustomer" Value="شاهد جميع أوامر من هذا الزبون." />
+	<Resource Key="Dashboard.Comments.Title" Value="تعليقات" />
+	<Resource Key="Dashboard.Comments.Description" Value="تعليقات صفحة البيانات." />
+	<Resource Key="Dashboard.Comments.SearchPlaceholder" Value="بحث في تعليقات" />
+	<Resource Key="Dashboard.Comments.Search" Value="بحث" />
+	<Resource Key="Dashboard.Comments.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Comments.CommentUserName" Value="{user}" />
+	<Resource Key="Dashboard.Comments.CommentTimestamp" Value="{datetime}" />
+	<Resource Key="Dashboard.Comments.DeleteComment" Value="حذف تعليق" />
+	<Resource Key="Dashboard.Comments.Action.Validation.NotAuthorizedToDeleteComment" Value="انك لم authorzed حذف هذا التعليق." />
+	<Resource Key="Dashboard.Comments.Action.Validation.UnableToDeleteComment" Value="غير قادر على حذف تعليق." />
+	<Resource Key="Dashboard.Comments.List.NoRecordFound" Value="لا توجد تعليقات." />
+	<Resource Key="Dashboard.Users.Title" Value="المستخدمين" />
+	<Resource Key="Dashboard.Users.Description" Value="المستخدمين سرد الصفحة." />
+	<Resource Key="Dashboard.Users.SearchPlaceholder" Value="البحث عن طريق اسم المستخدم أو البريد الالكتروني" />
+	<Resource Key="Dashboard.Users.SelectByRole" Value="الاختيار عن طريق دور" />
+	<Resource Key="Dashboard.Users.Search" Value="بحث" />
+	<Resource Key="Dashboard.Users.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Users.List.RegisteredOn" Value="مسجلة على" />
+	<Resource Key="Dashboard.Users.List.Name" Value="اسم" />
+	<Resource Key="Dashboard.Users.List.Username" Value="اسم المستخدم" />
+	<Resource Key="Dashboard.Users.List.Email" Value="البريد الإلكتروني" />
+	<Resource Key="Dashboard.Users.List.Roles" Value="الأدوار" />
+	<Resource Key="Dashboard.Users.List.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.Users.List.MoreDetails" Value="المزيد من التفاصيل" />
+	<Resource Key="Dashboard.Users.List.NoRecordFound" Value="لم يتم العثور على المستخدمين." />
+	<Resource Key="Dashboard.UserDetails.Title" Value="بيانات المستخدم" />
+	<Resource Key="Dashboard.UserDetails.Description" Value="بيانات المستخدم." />
+	<Resource Key="Dashboard.UserDetails.Username" Value="اسم المستخدم" />
+	<Resource Key="Dashboard.UserDetails.Location" Value="موقعك" />
+	<Resource Key="Dashboard.UserDetails.Info" Value="معلومات" />
+	<Resource Key="Dashboard.UserDetails.Roles" Value="الأدوار" />
+	<Resource Key="Dashboard.UserDetails.Orders" Value="الطلبات" />
+	<Resource Key="Dashboard.UserDetails.Comments" Value="تعليقات" />
+	<Resource Key="Dashboard.UserDetails.NoUserFound" Value="لم يتم العثور على المستخدم." />
+	<Resource Key="Dashboard.UserDetails.Info.FullName" Value="الاسم الكامل" />
+	<Resource Key="Dashboard.UserDetails.Info.PhoneNumber" Value="رقم الهاتف" />
+	<Resource Key="Dashboard.UserDetails.Info.Country" Value="بلد" />
+	<Resource Key="Dashboard.UserDetails.Info.City" Value="مدينة" />
+	<Resource Key="Dashboard.UserDetails.Info.Address" Value="عنوان" />
+	<Resource Key="Dashboard.UserDetails.Info.ZipCode" Value="الرمز البريدي" />
+	<Resource Key="Dashboard.UserDetails.Info.Email" Value="البريد الإلكتروني" />
+	<Resource Key="Dashboard.UserDetails.Info.Username" Value="اسم المستخدم" />
+	<Resource Key="Dashboard.UserDetails.Info.Update" Value="تحديث" />
+	<Resource Key="Dashboard.UserDetails.Info.Delete" Value="حذف" />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.FullNameRequired" Value="الإسم الكامل ضروري." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.FullNameMinimumLength" Value="الحد الأدنى طول هو {min}." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.FullNameMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.CountryRequired" Value="الدولة مطلوبة." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.CityRequired" Value="مطلوب المدينة." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.AddressRequired" Value="العنوان مطلوب." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.DataNotFormatted" Value="البيانات غير مهيأ." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.UserNotFound" Value="المستخدم ليس موجود." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.UnabletoUpdateInfo" Value="غير قادر على تحديث المعلومات." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.InfoUpdated" Value="معلومات التحديث بنجاح." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.UnabletoDeleteUser" Value="غير قادر على حذف المستخدم." />
+	<Resource Key="Dashboard.UserDetails.Info.Action.Validation.UserDeleted" Value="العضو المحذوفة بنجاح." />
+	<Resource Key="Dashboard.UserDetails.Roles.CurrentUserRoles" Value="أدوار المستخدمين الحالية" />
+	<Resource Key="Dashboard.UserDetails.Roles.RemoveUserRole" Value="إزالة دور" />
+	<Resource Key="Dashboard.UserDetails.Roles.UserDoesntHaveRoles" Value="لم يقم المستخدم أية أدوار." />
+	<Resource Key="Dashboard.UserDetails.Roles.AssignNewRoles" Value="تعيين دور جديد" />
+	<Resource Key="Dashboard.UserDetails.Roles.SelectRole" Value="حدد دور" />
+	<Resource Key="Dashboard.UserDetails.Roles.AssignUserRole" Value="تعيين دور" />
+	<Resource Key="Dashboard.UserDetails.Roles.Action.Validation.SelectValidRole" Value="يرجى تحديد دور." />
+	<Resource Key="Dashboard.UserDetails.Orders.SearchByOrderIDPlaceholder" Value="البحث عن طريق ترتيب ID" />
+	<Resource Key="Dashboard.UserDetails.Orders.SelectByOrderStatus" Value="الاختيار عن طريق ترتيب أوضاع ..." />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderStatus.Placed" Value="تم الطلب" />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderStatus.Processing" Value="قيد المعالجة" />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderStatus.Delivered" Value="تم التوصيل" />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderStatus.Failed" Value="فشل" />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderStatus.Cancelled" Value="ألغيت" />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderStatus.OnHold" Value="في الانتظار" />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderStatus.WaitingForPayment" Value="في انتظار الدفع" />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderStatus.Refunded" Value="مسترد" />
+	<Resource Key="Dashboard.UserDetails.Orders.Search" Value="بحث" />
+	<Resource Key="Dashboard.UserDetails.Orders.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.UserDetails.Orders.PlacedOnDate" Value="تم الطلب في تاريخ" />
+	<Resource Key="Dashboard.UserDetails.Orders.OrderAmount" Value="كمية الطلب" />
+	<Resource Key="Dashboard.UserDetails.Orders.PaymentMethod" Value="طريقة الدفع او السداد" />
+	<Resource Key="Dashboard.UserDetails.Orders.Status" Value="الحالة" />
+	<Resource Key="Dashboard.UserDetails.Orders.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.UserDetails.Orders.PaymentMethods.CreditCard" Value="بطاقة الائتمان" />
+	<Resource Key="Dashboard.UserDetails.Orders.PaymentMethods.PayPal" Value="باي بال" />
+	<Resource Key="Dashboard.UserDetails.Orders.PaymentMethods.CashOnDelivery" Value="الدفع عند الاستلام" />
+	<Resource Key="Dashboard.UserDetails.Orders.UpdatedOn" Value="تحديث في" />
+	<Resource Key="Dashboard.UserDetails.Orders.Details" Value="تفاصيل" />
+	<Resource Key="Dashboard.UserDetails.Orders.Track" Value="تتبع الطرد" />
+	<Resource Key="Dashboard.UserDetails.Orders.NoOrdersFound" Value="لم يتم العثور على أية طلبات." />
+	<Resource Key="Dashboard.UserDetails.Comments.SearchCommentsPlaceholder" Value="بحث في تعليقات" />
+	<Resource Key="Dashboard.UserDetails.Comments.SearchComments" Value="بحث" />
+	<Resource Key="Dashboard.UserDetails.Comments.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.UserDetails.Comments.CommentUserName" Value="{user}" />
+	<Resource Key="Dashboard.UserDetails.Comments.CommentTimestamp" Value="{datetime}" />
+	<Resource Key="Dashboard.UserDetails.Comments.DeleteComment" Value="حذف تعليق" />
+	<Resource Key="Dashboard.UserDetails.Comments.NoComments" Value="لا توجد تعليقات." />
+	<Resource Key="Dashboard.Roles.Title" Value="الأدوار" />
+	<Resource Key="Dashboard.Roles.Description" Value="الأدوار قائمة." />
+	<Resource Key="Dashboard.Roles.SearchPlaceholder" Value="بحث دور" />
+	<Resource Key="Dashboard.Roles.Search" Value="بحث" />
+	<Resource Key="Dashboard.Roles.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Roles.CreateRole" Value="إنشاء دور" />
+	<Resource Key="Dashboard.Roles.CreateNewRole" Value="إنشاء دور جديد" />
+	<Resource Key="Dashboard.Roles.Create.Name" Value="اسم الدور" />
+	<Resource Key="Dashboard.Roles.Create.NamePlaceholder" Value="إضافة اسم الدور" />
+	<Resource Key="Dashboard.Roles.Close" Value="إلغاء" />
+	<Resource Key="Dashboard.Roles.Save" Value="حفظ" />
+	<Resource Key="Dashboard.Roles.Save.Validations.NameRequired" Value="مطلوب اسم الدور." />
+	<Resource Key="Dashboard.Roles.Save.Validations.NameMinimumLength" Value="الحد الأدنى طول هو {min}." />
+	<Resource Key="Dashboard.Roles.Save.Validations.NameMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.Roles.Role" Value="وظيفة" />
+	<Resource Key="Dashboard.Roles.Users" Value="المستخدمين" />
+	<Resource Key="Dashboard.Roles.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.Roles.MoreDetails" Value="المزيد من التفاصيل" />
+	<Resource Key="Dashboard.Roles.NoRolesFound" Value="لا توجد أدوار." />
+	<Resource Key="Dashboard.RoleDetails.Title" Value="تفاصيل الدور" />
+	<Resource Key="Dashboard.RoleDetails.Description" Value="تفاصيل الدور" />
+	<Resource Key="Dashboard.RoleDetails.Info" Value="معلومات" />
+	<Resource Key="Dashboard.RoleDetails.Users" Value="المستخدمين" />
+	<Resource Key="Dashboard.RoleDetails.Info.Name" Value="اسم" />
+	<Resource Key="Dashboard.RoleDetails.Info.Update" Value="تحديث" />
+	<Resource Key="Dashboard.RoleDetails.Info.Delete" Value="حذف" />
+	<Resource Key="Dashboard.RoleDetails.Info.AdministratorRoleNotification" Value="لا يسمح هذا الدور إلى تحديث أو حذف لأنه يتم استخدامه للحصول على إذن." />
+	<Resource Key="Dashboard.RoleDetails.Info.RoleInfoUpdated" Value="المعلومات دور تجديد." />
+	<Resource Key="Dashboard.RoleDetails.Users.UsersWithRole" Value="المستخدمين مع هذا دور" />
+	<Resource Key="Dashboard.RoleDetails.Users.MoreDetails" Value="المزيد من التفاصيل" />
+	<Resource Key="Dashboard.RoleDetails.Users.NoUsersWithRole" Value="هذا الدور لا يتلقى أي المستخدمين." />
+	<Resource Key="Dashboard.Configurations.Title" Value="تكوينات" />
+	<Resource Key="Dashboard.Configurations.Description" Value="تكوينات القيد." />
+	<Resource Key="Dashboard.Configurations.SearchPlaceholder" Value="البحث تكوينات" />
+	<Resource Key="Dashboard.Configurations.SelectByConfigurationType" Value="الاختيار عن طريق نوع التكوين" />
+	<Resource Key="Dashboard.Configurations.ConfigurationTypes.Site" Value="موقع" />
+	<Resource Key="Dashboard.Configurations.ConfigurationTypes.Sliders" Value="المنزلق" />
+	<Resource Key="Dashboard.Configurations.ConfigurationTypes.Promotions" Value="الترقيات" />
+	<Resource Key="Dashboard.Configurations.ConfigurationTypes.SocialLinks" Value="روابط اجتماعية" />
+	<Resource Key="Dashboard.Configurations.ConfigurationTypes.Other" Value="آخر" />
+	<Resource Key="Dashboard.Configurations.Search" Value="بحث" />
+	<Resource Key="Dashboard.Configurations.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Configurations.List.Key" Value="مفتاح" />
+	<Resource Key="Dashboard.Configurations.List.Value" Value="القيمة" />
+	<Resource Key="Dashboard.Configurations.List.ConfigurationType" Value="نوع التكوين" />
+	<Resource Key="Dashboard.Configurations.List.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.Configurations.List.Edit" Value="تعديل" />
+	<Resource Key="Dashboard.Configurations.NoConfigurationFound" Value="لا توجد تكوين" />
+	<Resource Key="Dashboard.Configurations.EditConfiguration" Value="تحرير التكوين" />
+	<Resource Key="Dashboard.Configurations.UnableToUpdateConfigurations" Value="غير قادر على تحديث التشكيلات." />
+	<Resource Key="Dashboard.Configurations.Edit.Value" Value="القيمة" />
+	<Resource Key="Dashboard.Configurations.Edit.SliderPicture" Value="صورة المنزلق" />
+	<Resource Key="Dashboard.Configurations.Edit.Heading" Value="عنوان" />
+	<Resource Key="Dashboard.Configurations.Edit.Paragraph" Value="فقرة" />
+	<Resource Key="Dashboard.Configurations.Edit.LinkURL" Value="URL رابط" />
+	<Resource Key="Dashboard.Configurations.Edit.Close" Value="إلغاء" />
+	<Resource Key="Dashboard.Configurations.Edit.Save" Value="حفظ" />
+	<Resource Key="Dashboard.Configurations.Edit.Validation.ConfigurationValueRequited" Value="مطلوب قيمة التكوين." />
+	<Resource Key="Dashboard.Configurations.ConfigurationNotFound" Value="التكوين غير موجود." />
+	<Resource Key="Dashboard.Languages.Title" Value="اللغات" />
+	<Resource Key="Dashboard.Languages.Description" Value="اللغات الإدراج" />
+	<Resource Key="Dashboard.Languages.SearchPlaceholder" Value="البحث اللغات" />
+	<Resource Key="Dashboard.Languages.Search" Value="بحث" />
+	<Resource Key="Dashboard.Languages.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.Languages.AddLanguage" Value="إضافة لغة" />
+	<Resource Key="Dashboard.Languages.List.Icon" Value="أيقونة" />
+	<Resource Key="Dashboard.Languages.List.Name" Value="اسم" />
+	<Resource Key="Dashboard.Languages.List.ShortCode" Value="رمز قصير" />
+	<Resource Key="Dashboard.Languages.List.Status" Value="الحالة" />
+	<Resource Key="Dashboard.Languages.List.Actions" Value="إجراءات" />
+	<Resource Key="Dashboard.Languages.DefaultSiteLanguage" Value="افتراضي لغة الموقع" />
+	<Resource Key="Dashboard.Languages.LanguageWithoutResources" Value="هذه اللغة ليس لديها أي موارد. يرجى تحميل الموارد لتشغيل الموقع بهذه اللغة." />
+	<Resource Key="Dashboard.Languages.List.Enabled" Value="تمكين" />
+	<Resource Key="Dashboard.Languages.List.Disabled" Value="غير مفعل" />
+	<Resource Key="Dashboard.Languages.List.Edit" Value="تعديل" />
+	<Resource Key="Dashboard.Languages.List.Disable" Value="تعطيل" />
+	<Resource Key="Dashboard.Languages.List.Enable" Value="ممكن" />
+	<Resource Key="Dashboard.Languages.ConfirmDisableWarning" Value="هل أنت متأكد أنك تريد تعطيل هذه اللغة؟" />
+	<Resource Key="Dashboard.Languages.ConfirmDisable" Value="نعم، تعطيله!" />
+	<Resource Key="Dashboard.Languages.ConfirmDisableCancel" Value="لا، لا أميل تعطيل." />
+	<Resource Key="Dashboard.Languages.List.NoLanguagesFound" Value="لا توجد لغات." />
+	<Resource Key="Dashboard.Languages.EditLangaugeTitle" Value="تحرير اللغة" />
+	<Resource Key="Dashboard.Languages.EditLanguageDescription" Value="تحرير اللغة" />
+	<Resource Key="Dashboard.Languages.CreateLanguageTitle" Value="خلق لغة" />
+	<Resource Key="Dashboard.Languages.CreateLanguageDescription" Value="خلق لغة جديدة" />
+	<Resource Key="Dashboard.Languages.Action.Name" Value="اسم" />
+	<Resource Key="Dashboard.Languages.Action.ShortCode" Value="رمز قصير" />
+	<Resource Key="Dashboard.Languages.Action.Enabled" Value="تمكين" />
+	<Resource Key="Dashboard.Languages.Action.MakeDefault" Value="جعل اللغة الافتراضية" />
+	<Resource Key="Dashboard.Languages.Action.IsRTL" Value="غير RTL" />
+	<Resource Key="Dashboard.Languages.Action.Icon" Value="أيقونة" />
+	<Resource Key="Dashboard.Languages.Action.SelectLanguageIcon" Value="اختر اللغة أيقونة" />
+	<Resource Key="Dashboard.Languages.Action.SearchForIcon" Value="البحث عن أيقونة" />
+	<Resource Key="Dashboard.Languages.Action.SearchIconPlaceholder" Value="بحث مع البلد قصيرة اسم أي بمعنى الولايات المتحدة أو GB" />
+	<Resource Key="Dashboard.Languages.Action.Update" Value="تحديث" />
+	<Resource Key="Dashboard.Languages.Action.Disable" Value="تعطيل" />
+	<Resource Key="Dashboard.Languages.Action.Enable" Value="ممكن" />
+	<Resource Key="Dashboard.Languages.Action.Save" Value="حفظ" />
+	<Resource Key="Dashboard.Languages.Action.Cancel" Value="إلغاء" />
+	<Resource Key="Dashboard.Languages.Action.Validation.NameRequired" Value="مطلوب اسم." />
+	<Resource Key="Dashboard.Languages.Action.Validation.NameMinimumLength" Value="الحد الأدنى طول هو {min}." />
+	<Resource Key="Dashboard.Languages.Action.Validation.NameMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.Languages.Action.Validation.ShortCodeRequired" Value="مطلوب كود قصيرة." />
+	<Resource Key="Dashboard.Languages.Action.Validation.ShortCodeMinimumLength" Value="الحد الأدنى طول هو {min}." />
+	<Resource Key="Dashboard.Languages.Action.Validation.ShortCodeMaximumLength" Value="الحد الأقصى للطول هو {max}." />
+	<Resource Key="Dashboard.Languages.Action.ImportResources" Value="استيراد المصدر" />
+	<Resource Key="Dashboard.Languages.Action.ChooseFile" Value="اختر ملف" />
+	<Resource Key="Dashboard.Languages.Action.Import" Value="استيراد" />
+	<Resource Key="Dashboard.Languages.Action.ExportResources" Value="تصدير الموارد " />
+	<Resource Key="Dashboard.Languages.Action.ExportLanguageResources" Value="تصدير موارد اللغة " />
+	<Resource Key="Dashboard.Languages.Action.Export" Value="تصدير" />
+	<Resource Key="Dashboard.Languages.Action.ExportNoResourcesWarning" Value="لم يكن لديك هذه اللغة أي موارد. يرجى استيراد حزمة اللغة." />
+	<Resource Key="Dashboard.Languages.Action.ResourcesImportedSuccess" Value="تم استيراد الموارد بنجاح." />
+	<Resource Key="Dashboard.Languages.Action.ResourcesExportingWarning" Value="يمكن إعداد ملف المورد يستغرق بعض الوقت. الرجاء الانتظار بينما يقوم النظام بتوليد ملف التحميل." />
+	<Resource Key="Dashboard.Languages.Action.Validation.SelectFileToUpload" Value="الرجاء اختيار الملف المراد تحميله." />
+	<Resource Key="Dashboard.Languages.Action.Validation.SelectValidFileToUpload" Value="يرجى تحميل الملف مع الشكل الصحيح." />
+	<Resource Key="Dashboard.Languages.Action.Validation.LanguageNotFound" Value="لغة غير موجود." />
+	<Resource Key="Dashboard.Languages.Action.Validation.DefaultLanguageIsMust" Value="يجب أن تكون هناك لغة افتراضية. يرجى تحديد لغة أخرى كما الافتراضي ثم قم بتحديث هذه اللغة." />
+	<Resource Key="Dashboard.Languages.Action.Validation.UnableToUpdateLanguage" Value="غير قادر على تحديث اللغة." />
+	<Resource Key="Dashboard.Languages.Action.Validation.UnableToCreateLanguage" Value="غير قادر على خلق لغة." />
+	<Resource Key="Dashboard.Languages.Action.Validation.DefaultLanguageCantBeDisabled" Value="لا يمكن أن تكون اللغة الافتراضية المعوقين." />
+	<Resource Key="Dashboard.Languages.Action.Validation.NoResourcesInFile" Value="لا توجد موارد في الملف." />
+	<Resource Key="Dashboard.Languages.Action.Validation.UnableToImportResources" Value="غير قادر على الموارد الاستيراد." />
+	<Resource Key="Dashboard.NewsletterSubscribers.Title" Value="مشتركي النشرة الإخبارية" />
+	<Resource Key="Dashboard.NewsletterSubscribers.Description" Value="قائمة المشتركين في النشرة الإخبارية" />
+	<Resource Key="Dashboard.NewsletterSubscribers.SearchPlaceholder" Value="البحث عن طريق البريد الإلكتروني" />
+	<Resource Key="Dashboard.NewsletterSubscribers.Search" Value="بحث" />
+	<Resource Key="Dashboard.NewsletterSubscribers.Reset" Value="إعادة تعيين" />
+	<Resource Key="Dashboard.NewsletterSubscribers.List.Email" Value="البريد الإلكتروني" />
+	<Resource Key="Dashboard.NewsletterSubscribers.List.UserID" Value="معرف المستخدم" />
+	<Resource Key="Dashboard.NewsletterSubscribers.List.IsVerified" Value="تم التحقق من البريد الإلكتروني" />
+	<Resource Key="Dashboard.NewsletterSubscribers.NoRecordFound" Value="لا يوجد سجلات." />
+	<Resource Key="Dashboard.Products.ConfirmAsync" Value="تأكيد التزامن " />
+	<Resource Key="Dashboard.Products.Async" Value="تزامن المنتجات " />
+	<Resource Key="Dashboard.Products.ConfirmAsync" Value="موافق " />
+	<Resource Key="Dashboard.Products.CancelAsync" Value="الغاء " />
+	<Resource Key="Dashboard.Products.Async" Value="تزامن المنتجات" />
+</Language>

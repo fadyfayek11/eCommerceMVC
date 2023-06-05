@@ -1,0 +1,317 @@
+﻿@model FeatureActionViewModel
+@{
+    if (Model != null)
+    {
+        if (Model.ID > 0)
+        {
+            Model.PageTitle = "Dashboard.Features.EditFeatureTitle".LocalizedString();
+            Model.PageDescription = "Dashboard.Features.EditFeatureDescription".LocalizedString();
+            Model.PageURL = Url.EditAction("Features", Model.ID);
+        }
+        else
+        {
+            Model.PageTitle = "Dashboard.Features.CreateFeatureTitle".LocalizedString();
+            Model.PageDescription = "Dashboard.Features.CreateFeatureDescription".LocalizedString();
+            Model.PageURL = Url.CreateAction("Features");
+        }
+
+        Model.PageImageURL = PictureHelper.PageImageURL("features.jpg");
+    }
+    var featureValuesCount = 0;
+
+}
+
+<div class="page-info-container">
+    <h3 class="h3 mb-2 text-gray-800">
+        @Model.PageTitle
+    </h3>
+    <p>
+        @Model.PageDescription
+    </p>
+    <hr />
+</div>
+
+<div class="page-data-holder mb-4">
+    <form id="actionForm" method="post">
+        <input type="hidden" name="ID" value="@Model.ID" />
+
+        <div class="form-group">
+            <label>
+                @("Dashboard.Features.Action.Name".Localized())
+            </label>
+            <input class="form-control" name="FeatureName" value="@Model.FeatureName" placeholder="@("Dashboard.Features.Action.NamePlaceholder".Localized())" />
+        </div>
+
+        <div class="form-group">
+            <label>
+                @("Dashboard.Features.Action.FeatureType".Localized())
+            </label>
+            <select class="form-control" name="Type" id="Type">
+                @*@foreach (var _featureType in Enum.GetValues(typeof(Types)).Cast<Types>())
+        {
+            var selected = Model.Type == (int)_featureType ? "selected" : string.Empty;
+            <option value="@((int)_featureType)" @selected>
+                @(("Dashboard.Features.FeatureTypes." + _featureType.ToString()).Localized())
+            </option>
+        }*@
+                @{
+                    var selected = Model.Type == (int)Types.DropDownList ? "selected" : string.Empty;
+                    <option value="@((int)Types.DropDownList)" @selected>
+                        @(("Dashboard.Features.FeatureTypes." + Types.DropDownList.ToString()).Localized())
+                    </option>
+                }
+            </select>
+        </div>
+
+        @if (Model.ID > 0)
+        {
+            <div class="input-group">
+                <input id="FeatureId" type="text" value="@Model.ID" class="form-control" hidden>
+                <input id="FeatureValue" type="text" class="form-control" placeholder="@("Dashboard.Features.Action.FeatureValue".Localized())" onkeyup="handleFeatureValue(event)">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="addValue">@("Dashboard.Features.Action.AddFeatureValue".Localized())</button>
+                </div>
+            </div>
+            <div class="form-group mb-0">
+                <table class="table table-striped mb-0" id="specificationsTable">
+                    <thead>
+                        <tr>
+                            <th scope="col" width="45%">@("Dashboard.Features.Action.FeatureValue".Localized())</th>
+                            <th scope="col" width="10%">@("Dashboard.Features.Action.FeatureValueAction".Localized())</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.FeatureValues != null && Model.FeatureValues.Count > 0)
+                        {
+                            foreach (var value in Model.FeatureValues)
+                            {
+                                featureValuesCount++;
+
+                                var featureValue = value.Value;
+                                var featureValueId = value.ID;
+                                var featureId = value.FeatureID;
+                                var specName = string.Format("featureValue{0}", featureValuesCount);
+
+                                <tr id="@featureValueId" class="specificationRow">
+                                    <td class="value">@featureValue</td>
+                                    <td>
+                                        <input type="hidden" name="@specName" value="@string.Format("{0}~{1}~{2}", featureValue, featureId,featureValueId)" onc />
+                                        <button class="btn btn-danger deleteSpecificationButton btn-sm" type="button" onclick="removeRow(this)">
+                                            @("Dashboard.Features.Action.FeatureValueDelete".Localized())
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+
+                        <tr id="noSpecificationRow" style="@(Model.FeatureValues == null || Model.FeatureValues.Count == 0 ? string.Empty : "display:none")">
+                            <td scope="row" colspan="3">@("Dashboard.Features.Action.NoFeatureValues".Localized())</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        }
+
+
+        <hr />
+        <div class="form-group mb-0">
+            @if (Model.ID > 0)
+            {
+                <button class="btn btn-success" type="submit" id="actionButton">
+                    <i class="fas fa-edit mr-1"></i>
+                    @("Dashboard.Features.Update".Localized())
+                </button>
+                <button class="deleteButton btn btn-danger" type="button" data-id="@Model.ID">
+                    <i class="fas fa-trash-alt mr-1"></i>
+                    @("Dashboard.Features.Delete".Localized())
+                </button>
+            }
+            else
+            {
+                <button class="btn btn-success" type="submit" id="actionButton">
+                    <i class="fas fa-plus mr-1"></i>
+                    @("Dashboard.Features.Save".Localized())
+                </button>
+            }
+            <a class="btn btn-secondary" href="@Url.ListAction("Features")">
+                <i class="fas fa-angle-double-left mr-1"></i>
+                @("Dashboard.Features.Cancel".Localized())
+            </a>
+        </div>
+    </form>
+
+
+</div>
+
+<script type="text/x-custom-template" id="specificationRow">
+    <tr class="specificationRow new" style="display:none">
+        <td class="value"></td>
+        <td>
+            <input type="hidden" name="featureValue" value="" />
+            <button class="btn btn-danger deleteSpecificationButton btn-sm" type="button" onclick="removeRow(this)">
+                @("Dashboard.Features.Action.FeatureValueDelete".Localized())
+            </button>
+        </td>
+    </tr>
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(window).keydown(function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+            }
+        });
+    });
+
+    function handleFeatureValue(e) {
+        if (e.keyCode === 13) {
+            e.preventDefault(); 
+            $("#addValue").click();
+        }
+    }
+
+    var featureValuesCount = @(featureValuesCount + 1);
+
+    $("#Type").change(function () {
+        $('[rel-featuretype]').hide();
+        $('[rel-featuretype=' + $(this).val() + ']').show();
+    });
+
+    function removeRow(column) {
+        $(column).parents("tr").remove();
+
+        showHideNoSpecificationsRow();
+    }
+    $('input[name="ValidTill"]').datepicker();
+
+    $("#actionForm").validate({
+        errorClass: "alert alert-danger",
+        errorElement: "div",
+        rules: {
+            FeatureName: {
+                required: true,
+                minlength: 5,
+                maxlength: 150
+            },
+            Type: {
+                required: true
+            },
+        },
+        messages: {
+            FeatureName: {
+                required: "@("Dashboard.Features.Action.Validation.NameRequired".Localized())",
+				minlength: "@("Dashboard.Features.Action.Validation.NameMinimumLength".Localized().ToString().Replace("{min}", "3"))",
+				maxlength: "@("Dashboard.Features.Action.Validation.NameMaximumLength".Localized().ToString().Replace("{max}", "150"))"
+            },
+            Type: {
+                required: "@("Dashboard.Features.Action.Validation.FeatureTypeRequired".Localized())",
+            },
+        },
+        highlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        }
+    });
+
+    $("#actionForm").submit(function (e) {
+        if ($("#actionForm").valid()) {
+            addLoader("actionForm");
+            $.ajax({
+                type: "post",
+                data: $("#actionForm").serialize()
+			})
+            .done(function (response) {
+                if (response.Success) {
+                    window.location.href = "@Url.ListAction("Features")";
+			    }
+			    else {
+                    removeLoader("actionForm");
+                    Swal.fire("@("Dashboard.Message.Error".Localized())", response.Message, "error");
+			    }
+			})
+            .fail(function () {
+                 removeLoader("actionForm");
+                 Swal.fire("@("Dashboard.Message.Error".Localized())", "@("Dashboard.Message.GenericErrorMessage".Localized())", "error");
+			});
+        }
+
+        e.preventDefault();
+    });
+
+    function showHideNoSpecificationsRow() {
+        if ($(".specificationRow").length > 0) {
+            $("#noSpecificationRow").hide();
+        }
+        else {
+            $("#noSpecificationRow").show();
+        }
+    }
+    $("#addValue").click(function () {
+        var featureId = $("#FeatureId").val();
+        var featureValue = $("#FeatureValue").val();
+
+        if (featureId && featureValue) {
+            $("#specificationsTable tbody").append($("#specificationRow").clone().html());
+
+            var $newRow = $(".new", "#specificationsTable tbody");
+
+            //for display to user
+            //$(".title", $newRow).html(featureId);
+            $(".value", $newRow).html(featureValue);
+
+            //for submitting value
+            $("[name=featureValue]", $newRow).val(featureValue + "~" + featureId);
+            $("[name=featureValue]", $newRow).attr("name", "featureValue" + featureValuesCount);
+            $newRow.attr("id", "featureValue" + featureValuesCount);
+            $newRow.removeClass("new");
+
+            //show this new specification
+            $newRow.show();
+
+            //for new specification
+            featureValuesCount++;
+
+            //reset inputs
+            $("#FeatureValue").val("");
+
+            showHideNoSpecificationsRow();
+        }
+    });
+    $(".deleteButton").click(function () {
+        var recordID = $(this).attr("data-id");
+
+        Swal.fire({
+            title: '@("Dashboard.Message.Warning".Localized())',
+            text: "@("Dashboard.Message.ConfirmDeleteWarning".Localized())",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '@("Dashboard.Message.ConfirmDelete".Localized())',
+            cancelButtonText: '@("Dashboard.Message.CancelDelete".Localized())'
+        }).then((result) => {
+            if (result.value) {
+                addLoader("actionForm");
+				$.ajax({
+					url: "@Url.DeleteAction("Features")",
+                    type: "post",
+                    data: { id: recordID }
+				})
+                .done(function (response) {
+                    if (response != null && response.Success != undefined && response.Success) {
+                        window.location.href = "@Url.ListAction("Features")";
+				    }
+                    else {
+                        removeLoader("actionForm");
+                        Swal.fire("@("Dashboard.Message.Error".Localized())", response.Message, "error");
+				    }
+				})
+                .fail(function () {
+                     removeLoader("actionForm");
+                     Swal.fire("@("Dashboard.Message.Error".Localized())", "@("Dashboard.Message.GenericErrorMessage".Localized())", "error");
+			    });
+            }
+        });
+    });
+</script>

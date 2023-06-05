@@ -1,0 +1,314 @@
+﻿@model ProductTypeActionViewModel
+@{ if (Model != null)
+                {
+                    if (Model.ProductTypeID > 0)
+                    {
+                        Model.PageTitle = "Dashboard.Products.EditProductTypeTitle".LocalizedString();
+                        Model.PageDescription = "Dashboard.Products.EditProductTypeDescription".LocalizedString();
+                        Model.PageURL = Url.EditAction("ProductTypes", Model.ProductTypeID);
+                    }
+                    else
+                    {
+                        Model.PageTitle = "Dashboard.Products.CreateProductTypeTitle".LocalizedString();
+                        Model.PageDescription = "Dashboard.Products.CreateProductTypeDescription".LocalizedString();
+                        Model.PageURL = Url.CreateAction("ProductTypes");
+                    }
+
+                    Model.PageImageURL = PictureHelper.PageImageURL("products.jpg");
+                } }
+
+<script src="~/Content/lib/ckeditor-4.14.0/ckeditor.js"></script>
+
+<div class="page-info-container">
+    <h3 class="h3 mb-2 text-gray-800">
+        @Model.PageTitle
+    </h3>
+    <p>
+        @Model.PageDescription
+    </p>
+    <hr />
+</div>
+
+<div class="page-data-holder mb-4">
+    <form id="actionForm" method="post">
+        <input type="hidden" name="ProductID" value="@Model.ProductID" />
+        <input type="hidden" name="ProductTypeID" value="@Model.ProductTypeID" />
+        <div class="card mt-3">
+            <div class="card-body">
+
+                <div class="form-group">
+                    <label>
+                        @("Dashboard.Products.Action.ProductSKU".Localized())
+                    </label>
+                    <input class="form-control" name="SKU" value="@Model.SKU" placeholder="@("Dashboard.Products.Action.ProductSKU".Localized())" />
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        @("Dashboard.Products.Action.ProductName".Localized())
+                    </label>
+                    <input class="form-control" name="Name" value="@Model.Product.ProductRecords.FirstOrDefault().Name" placeholder="@("Dashboard.Products.Action.NamePlaceholder".Localized())" disabled />
+                </div>
+                <div class="form-group">
+                    <label>
+                        @("Dashboard.Products.Action.Price".Localized())
+                    </label>
+                    <div class="input-group">
+                        @if (ConfigurationsHelper.PriceCurrencyPosition.ToLower().StartsWith("{price}"))
+                        {
+            <input type="text" class="form-control" name="Price" value="@Model.Price" placeholder="@("Dashboard.Products.Action.PricePlaceholder".Localized())">
+                            <div class="input-group-append">
+                                <span class="input-group-text">@ConfigurationsHelper.CurrencySymbol</span>
+                            </div> }
+                        else
+                        {
+            <div class="input-group-prepend">
+                <span class="input-group-text">@ConfigurationsHelper.CurrencySymbol</span>
+            </div>
+                            <input type="text" class="form-control" name="Price" value="@Model.Price" placeholder="@("Dashboard.Products.Action.PricePlaceholder".Localized())">}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        @("Dashboard.Products.Action.Discount".Localized())
+                    </label>
+                    <div class="input-group">
+                        @if (ConfigurationsHelper.PriceCurrencyPosition.ToLower().StartsWith("{price}"))
+                        {
+            <input type="text" class="form-control" name="Discount" value="@Model.Discount">
+                            <div class="input-group-append">
+                                <span class="input-group-text">@ConfigurationsHelper.CurrencySymbol</span>
+                            </div> }
+                        else
+                        {
+            <div class="input-group-prepend">
+                <span class="input-group-text">@ConfigurationsHelper.CurrencySymbol</span>
+            </div>
+                            <input type="text" class="form-control" name="Discount" value="@Model.Discount">}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        @("Dashboard.Products.Action.Cost".Localized())
+                    </label>
+                    <div class="input-group">
+                        @if (ConfigurationsHelper.PriceCurrencyPosition.ToLower().StartsWith("{price}"))
+                        {
+            <input type="text" class="form-control" name="Cost" value="@Model.Cost">
+                            <div class="input-group-append">
+                                <span class="input-group-text">@ConfigurationsHelper.CurrencySymbol</span>
+                            </div> }
+                        else
+                        {
+            <div class="input-group-prepend">
+                <span class="input-group-text">@ConfigurationsHelper.CurrencySymbol</span>
+            </div>
+                            <input type="text" class="form-control" name="Cost" value="@Model.Cost">}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        @("Dashboard.Products.Action.StockQuantity".Localized())
+                    </label>
+                    <input class="form-control" name="StockQuantity" value="@Model.StockQuantity" placeholder="@("Dashboard.Products.Action.StockQuantityPlaceholder".Localized())" />
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        @("Dashboard.Products.Action.Barcode".Localized())
+                    </label>
+                    <input class="form-control" name="Barcode" value="@Model.Barcode" placeholder="@("Dashboard.Products.Action.BarcodePlaceholder".Localized())" />
+                </div>
+                <div class="form-group">
+                    <label>
+                        @("Dashboard.Features.Action.FeatureValue".Localized())
+                    </label>
+                    <select class="form-control" name="FeatureValueID" id="FeatureValueID">
+                        @foreach (var feature in Model.Features)
+                        {
+                            foreach (var featureValue in feature.FeatureValues)
+                            {
+            <option value="@(featureValue.ID)" @(Model.FeatureValueID == featureValue.ID ? "selected" : "")>
+                @(feature.FeatureName + "     " + featureValue.Value)
+            </option>
+}
+
+    }
+                    </select>
+                </div>
+                <hr />
+                <div class="form-group mb-0">
+                    @if (Model.ProductID > 0)
+                    {
+        <button class="btn btn-success" type="submit" id="actionButton">
+            <i class="fas fa-edit mr-1"></i>
+            @("Dashboard.Products.Update".Localized())
+        </button>
+                        <button class="deleteButton btn btn-danger" type="button" data-id="@Model.ProductTypeID">
+                            <i class="fas fa-trash-alt mr-1"></i>
+                            @("Dashboard.Products.Delete".Localized())
+                        </button> }
+                    else
+                    {
+        <button class="btn btn-success" type="submit" id="actionButton">
+            <i class="fas fa-plus mr-1"></i>
+            @("Dashboard.Products.Save".Localized())
+        </button>}
+                    <a class="btn btn-secondary" href="@Url.ListActionProductTypes("ProductTypes",Model.ProductID)">
+                        <i class="fas fa-angle-double-left mr-1"></i>
+                        @("Dashboard.Products.Cancel".Localized())
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script>
+
+    function removeRow(column) {
+        $(column).parents("tr").remove();
+
+        showHideNoSpecificationsRow();
+    }
+
+    $("#actionForm").validate({
+        errorClass: "alert alert-danger",
+        errorElement: "div",
+        rules: {
+            Name: {
+                required: true,
+                minlength: 15,
+                maxlength: 150
+            },
+            CategoryID: {
+                required: true
+            },
+            Summary: {
+                required: true,
+                minlength: 20,
+                maxlength: 200
+            },
+            Description: {
+                required: updateEditFields(),
+                minlength: 20
+            },
+            Price: {
+                required: true,
+                range: [1, 10000000]
+            },
+            ProductPictures: {
+                required: true,
+            },
+            StockQuantity: {
+                required: true,
+                range: [0, 10000000]
+            },
+        },
+        messages: {
+            Name: {
+                required: "@("Dashboard.Products.Action.Validation.NameRequired".Localized())",
+				minlength: "@("Dashboard.Products.Action.Validation.NameMinimumLength".LocalizedString().Replace("{min}", "15"))",
+				maxlength: "@("Dashboard.Products.Action.Validation.NameMaximumLength".LocalizedString().Replace("{max}", "150"))"
+            },
+            CategoryID: {
+                required: "@("Dashboard.Products.Action.Validation.CategoryRequired".Localized())",
+            },
+            Summary: {
+                required: "@("Dashboard.Products.Action.Validation.SummaryRequired".Localized())",
+				minlength: "@("Dashboard.Products.Action.Validation.SummaryMinimumLength".LocalizedString().Replace("{min}", "20"))",
+				maxlength: "@("Dashboard.Products.Action.Validation.SummaryMaximumLength".LocalizedString().Replace("{max}", "200"))"
+            },
+            Description: {
+                required: "@("Dashboard.Products.Action.Validation.DescriptionRequired".Localized())",
+				minlength: "@("Dashboard.Products.Action.Validation.DescriptionMinimumLength".LocalizedString().Replace("{min}", "20"))"
+            },
+            Price: {
+                required: "@("Dashboard.Products.Action.Validation.PriceRequired".Localized())",
+				range: "@("Dashboard.Products.Action.Validation.PriceRange".LocalizedString().Replace("{min}", "1").Replace("{max}", "10000000"))"
+            },
+            ProductPictures: {
+                required: "@("Dashboard.Products.Action.Validation.ProductPicturesRequired".Localized())"
+            },
+            StockQuantity: {
+                required: "@("Dashboard.Products.Action.Validation.StockQuantityRequired".Localized())",
+				range: "@("Dashboard.Products.Action.Validation.StockQuantityRange".LocalizedString().Replace("{min}", "1").Replace("{max}", "10000000"))"
+            },
+        },
+        highlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        errorPlacement: function ( error, element ) {
+            if(element.parent().hasClass('input-group')){
+                error.insertAfter( element.parent() );
+            }else{
+          	    error.insertAfter( element );
+            }
+        }
+    });
+
+    $("#actionForm").submit(function (e) {
+        updateEditFields();
+
+        if ($("#actionForm").valid()) {
+            addLoader("actionForm");
+            $.ajax({
+                type: "post",
+                data: $("#actionForm").serialize()
+			})
+            .done(function (response) {
+                if (response.Success) {
+                    window.location.href = "@Url.ListActionProductTypes("ProductTypes",Model.ProductID)";
+			    }
+			    else {
+                    removeLoader("actionForm");
+                    Swal.fire("@("Dashboard.Message.Error".Localized())", response.Message, "error");
+			    }
+			})
+            .fail(function () {
+                 removeLoader("actionForm");
+                 Swal.fire("@("Dashboard.Message.Error".Localized())", "@("Dashboard.Message.GenericErrorMessage".Localized())", "error");
+			});
+        }
+
+        e.preventDefault();
+    });
+
+    $(".deleteButton").click(function () {
+        var recordID = $(this).attr("data-id");
+
+        Swal.fire({
+            title: '@("Dashboard.Message.Warning".Localized())',
+            text: "@("Dashboard.Message.ConfirmDeleteWarning".Localized())",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '@("Dashboard.Message.ConfirmDelete".Localized())',
+            cancelButtonText: '@("Dashboard.Message.CancelDelete".Localized())'
+        }).then((result) => {
+            if (result.value) {
+                addLoader("actionForm");
+				$.ajax({
+					url: "@Url.DeleteAction("ProductTypes")",
+                    type: "post",
+                    data: { id: recordID }
+				})
+                .done(function (response) {
+                    if (response != null && response.Success != undefined && response.Success) {
+                        window.location.href = "@Url.ListActionProductTypes("ProductTypes",Model.ProductID)";
+				    }
+                    else {
+                        removeLoader("actionForm");
+                        Swal.fire("@("Dashboard.Message.Error".Localized())", response.Message, "error");
+				    }
+				})
+                .fail(function () {
+                     removeLoader("actionForm");
+                     Swal.fire("@("Dashboard.Message.Error".Localized())", "@("Dashboard.Message.GenericErrorMessage".Localized())", "error");
+			    });
+            }
+        });
+    });
+</script>

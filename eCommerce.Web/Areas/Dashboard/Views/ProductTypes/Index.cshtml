@@ -1,0 +1,33 @@
+﻿@model eCommerce.Web.Areas.Dashboard.ViewModels.ProductTypesListingViewModel
+@{
+    if (Model != null)
+    {
+        Model.PageTitle = "Dashboard.Products.Title".LocalizedString();
+        Model.PageDescription = "Dashboard.Products.Description".LocalizedString();
+        Model.PageURL = Url.ListAction("Products");
+        Model.PageImageURL = PictureHelper.PageImageURL("products.jpg");
+    }
+}
+
+<div class="page-info-container">
+    <h3 class="h3 mb-2 text-gray-800">
+        @Model.PageTitle
+    </h3>
+    <p>
+        @Model.PageDescription
+    </p>
+    <hr />
+</div>
+
+<div class="page-data-holder card shadow mb-4">
+    <div class="card-header">
+        <form action="@Url.ListAction("Products")">
+            <div class="input-group">
+                <a href="@Url.CreateActionID("ProductTypes",Model.ProductID)" role="button" class="form-control btn btn-success"><i class="fas fa-plus"></i> @("Dashboard.Products.CreateProduct".Localized())</a>
+            </div>
+        </form>
+    </div>
+    <div class="card-body p-0" id="list-holder">
+        @{Html.RenderPartial("_Listing", Model);}
+    </div>
+</div>
