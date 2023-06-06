@@ -5,12 +5,11 @@
     Model.LoginViewModel.PageURL = Url.Login();
     Model.LoginViewModel.PageImageURL = PictureHelper.PageImageURL("login.jpg");
     Layout = "";
-    
-    Model.RegisterViewModel.PageTitle = "PP.Login.Title".LocalizedString();
-    Model.RegisterViewModel.PageDescription = "PP.Login.Description".LocalizedString().Replace("{application}", ConfigurationsHelper.ApplicationName);
-    Model.RegisterViewModel.PageURL = Url.Login();
-    Model.RegisterViewModel.PageImageURL = PictureHelper.PageImageURL("login.jpg");
-    Layout = "";
+
+    Model.RegisterViewModel.PageTitle = "PP.Register.Title".LocalizedString();
+    Model.RegisterViewModel.PageDescription = "PP.Register.Description".LocalizedString().Replace("{application}", ConfigurationsHelper.ApplicationName);
+    Model.RegisterViewModel.PageURL = Url.Register();
+    Model.RegisterViewModel.PageImageURL = PictureHelper.PageImageURL("register.jpg");
 }
 <div class="row col-12">
     <div class="col-6 pb-0">
