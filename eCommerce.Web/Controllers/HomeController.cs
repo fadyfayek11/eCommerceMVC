@@ -16,7 +16,6 @@ using System.Web.Mvc;
 
 namespace eCommerce.Web.Controllers
 {
-    [Authorize]
     public class HomeController : PublicBaseController
     {
         public ActionResult Index()

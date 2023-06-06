@@ -1,0 +1,29 @@
+﻿@model eCommerce.Web.ViewModels.LoginRegisterViewModel
+@{
+    Model.LoginViewModel.PageTitle = "PP.Login.Title".LocalizedString();
+    Model.LoginViewModel.PageDescription = "PP.Login.Description".LocalizedString().Replace("{application}", ConfigurationsHelper.ApplicationName);
+    Model.LoginViewModel.PageURL = Url.Login();
+    Model.LoginViewModel.PageImageURL = PictureHelper.PageImageURL("login.jpg");
+    Layout = "";
+    
+    Model.RegisterViewModel.PageTitle = "PP.Login.Title".LocalizedString();
+    Model.RegisterViewModel.PageDescription = "PP.Login.Description".LocalizedString().Replace("{application}", ConfigurationsHelper.ApplicationName);
+    Model.RegisterViewModel.PageURL = Url.Login();
+    Model.RegisterViewModel.PageImageURL = PictureHelper.PageImageURL("login.jpg");
+    Layout = "";
+}
+<div class="row col-12">
+    <div class="col-6 pb-0">
+        <div>
+            <h3 class="login-titel" data-no-translation="" data-trp-gettext="">@Model.LoginViewModel.PageTitle</h3>
+            @Html.Partial("_Login", Model.LoginViewModel)
+        </div>
+    </div>
+    <div class="col-6 text-left" style="border-right: 1px solid #ececec;">
+        <div>
+
+            <h3 class="login-titel" data-no-translation="" data-trp-gettext="">@Model.RegisterViewModel.PageTitle</h3>
+            @Html.Partial("_Register", Model.RegisterViewModel)
+        </div>
+    </div> 
+</div>

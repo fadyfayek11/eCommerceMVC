@@ -79,7 +79,18 @@ namespace eCommerce.Web.Controllers
         }
 
         #endregion
+        [HttpGet]
+        [AllowAnonymous]
+        public ActionResult LoginRegisterPartial(string returnUrl)
+        {
+            var model = new LoginRegisterViewModel
+            {
+                LoginViewModel = new LoginViewModel { ReturnUrl = returnUrl },
+                RegisterViewModel = new RegisterViewModel()
+            };
 
+            return PartialView("_LoginRegisterPartial", model);
+        }
         [HttpGet]
         [AllowAnonymous]
         [OutputCache(Duration = 0)]

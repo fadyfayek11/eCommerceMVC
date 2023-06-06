@@ -328,6 +328,7 @@
     <Compile Include="ViewModels\CommentsViewModels.cs" />
     <Compile Include="ViewModels\HomeViewModels.cs" />
     <Compile Include="ViewModels\CartViewModels.cs" />
+    <Compile Include="ViewModels\LoginRegisterViewModel.cs" />
     <Compile Include="ViewModels\OrdersViewModels.cs" />
     <Compile Include="ViewModels\ProductsViewModels.cs" />
     <Compile Include="ViewModels\SearchFiltersViewModels.cs" />
@@ -4757,6 +4758,7 @@
     <None Include="Properties\PublishProfiles\faresmahroum-001-subsite6 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Views\Orders\_Details.cshtml" />
+    <Content Include="Views\Users\_LoginRegisterPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Data\eCommerce.Data.csproj">

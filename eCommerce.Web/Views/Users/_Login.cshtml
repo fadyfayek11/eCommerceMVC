@@ -1,12 +1,12 @@
 ﻿@model eCommerce.Web.ViewModels.LoginViewModel
-<form id="loginForm" method="post">
+<form id="loginForm" method="post" class="mt-5">
     @Html.AntiForgeryToken()
     <div class="group-input">
-        <label for="username">@("PP.Login.Username".LocalizedString()) <span class="text-danger">*</span></label>
+        <label for="username" class="login-titel" style="font-size: 13px">@("PP.Login.Username".LocalizedString()) <span class="text-danger">*</span></label>
         <input class="form-control" name="Username" placeholder="@("PP.Login.UsernamePlaceholder".LocalizedString())" onfocus="this.placeholder = ''" onblur="this.placeholder = '@("PP.Login.UsernamePlaceholder".LocalizedString())'">
     </div>
     <div class="group-input">
-        <label for="pass">@("PP.Login.Password".LocalizedString()) <span class="text-danger">*</span></label>
+        <label for="pass" class="login-titel" style="font-size: 13px">@("PP.Login.Password".LocalizedString()) <span class="text-danger">*</span></label>
         <input type="password" class="form-control" name="Password" placeholder="@("PP.Login.PasswordPlaceholder".LocalizedString())" onfocus="this.placeholder = ''" onblur="this.placeholder = '@("PP.Login.PasswordPlaceholder".LocalizedString())'">
     </div>
     <div class="group-input gi-check">
@@ -16,11 +16,6 @@
                 <input type="checkbox" name="RememberMe" id="RememberMe" value="true" checked>
                 <span class="checkmark"></span>
             </label>
-
-            <a href="/register" style="color:white" class="moreButton forget-pass btn btn-primary">
-                <i class="fas fa-user mr-1"></i>
-                انشاء حساب جديد
-            </a>
             @*<a href="@Url.ForgotPassword()" class="forget-pass">@("PP.Login.ForgotPassword".LocalizedString())</a>*@
         </div>
     </div>

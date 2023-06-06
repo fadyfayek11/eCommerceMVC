@@ -9,7 +9,6 @@ using System.Web.Mvc;
 
 namespace eCommerce.Web.Controllers
 {
-    [Authorize]
     public class CategoriesController : PublicBaseController
     {
         [OutputCache(Duration = 60, VaryByParam = "lang")]

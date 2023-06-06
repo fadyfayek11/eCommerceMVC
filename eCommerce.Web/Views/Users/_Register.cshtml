@@ -1,55 +1,44 @@
 ﻿@model eCommerce.Web.ViewModels.RegisterViewModel
 
-<form id="registerForm" method="post">
+<form id="registerForm" method="post" class="mt-5">
     @Html.AntiForgeryToken()
     <div class="group-input">
-        <label for="FullName">@("PP.Register.FullName".LocalizedString()) <span class="text-danger">*</span></label>
+        <label for="FullName" class="login-titel" style="font-size: 13px">@("PP.Register.FullName".LocalizedString()) <span class="text-danger">*</span></label>
         <input class="form-control" name="FullName" placeholder="@("PP.Register.FullNamePlaceholder".LocalizedString())" onfocus="this.placeholder = ''" onblur="this.placeholder = '@("PP.Register.FullNamePlaceholder".LocalizedString())'" value="@Model.FullName">
     </div>
     <div class="group-input">
-        <label for="Email">@("PP.Register.Email".LocalizedString()) <span class="text-danger">*</span></label>
+        <label for="Email" class="login-titel" style="font-size: 13px">@("PP.Register.Email".LocalizedString()) <span class="text-danger">*</span></label>
         <input class="form-control" name="Email" placeholder="@("PP.Register.EmailPlaceholder".LocalizedString())" onfocus="this.placeholder = ''" onblur="this.placeholder = '@("PP.Register.EmailPlaceholder".LocalizedString())'" value="@Model.Email">
     </div>
     <div class="group-input">
-        <label for="username">@("PP.Register.Username".LocalizedString()) <span class="text-danger">*</span></label>
+        <label for="username" class="login-titel" style="font-size: 13px">@("PP.Register.Username".LocalizedString()) <span class="text-danger">*</span></label>
         <input class="form-control" name="Username" placeholder="@("PP.Register.UsernamePlaceholder".LocalizedString())" onfocus="this.placeholder = ''" onblur="this.placeholder = '@("PP.Register.UsernamePlaceholder".LocalizedString())'" value="@Model.Username">
     </div>
-    <div class="form-group row">
-        <label class="col-sm-3 col-form-label text-right">@("PP.UserProfile.Info.PhoneNumber".Localized())</label>
-        <div class="col-sm-9">
-            <input name="PhoneNumber" type="text" class="form-control">
-        </div>
+    <div class="form-group">
+        <label class="login-titel" style="font-size: 13px" for="PhoneNumber">@("PP.UserProfile.Info.PhoneNumber".Localized())</label>
+        <input name="PhoneNumber" type="text" class="form-control">
     </div>
-    @*<div class="form-group row">
-        <label class="col-sm-3 col-form-label text-right">@("PP.UserProfile.Info.Country".Localized())</label>
-        <div class="col-sm-9">
-            <input name="Country" type="text"  class="form-control">
-        </div>
-    </div>*@
-    <div class="form-group row">
-        <label class="col-sm-3 col-form-label text-right">@("PP.UserProfile.Info.City".Localized())</label>
-        <div class="col-sm-9">
-            <input name="City" type="text"  class="form-control">
-        </div>
+  
+    <div class="form-group">
+        <label class="login-titel" style="font-size: 13px" for="City">@("PP.UserProfile.Info.City".Localized())</label>
+        <input name="City" type="text"  class="form-control">
     </div>
-    <div class="form-group row">
-        <label class="col-sm-3 col-form-label text-right">@("PP.UserProfile.Info.Address".Localized())</label>
-        <div class="col-sm-9">
-            <textarea name="Address" class="form-control"> </textarea>
-        </div>
+    <div class="form-group">
+        <label class="login-titel" style="font-size: 13px" for="Address">@("PP.UserProfile.Info.Address".Localized())</label>
+        <textarea name="Address" class="form-control" style="margin: 0;padding: 0;"> </textarea>
     </div>
     <div class="group-input">
-        <label for="pass">@("PP.Register.Password".LocalizedString()) <span class="text-danger">*</span></label>
+        <label for="pass" class="login-titel" style="font-size: 13px">@("PP.Register.Password".LocalizedString()) <span class="text-danger">*</span></label>
         <input type="password" class="form-control" name="Password" placeholder="@("PP.Register.PasswordPlaceholder".LocalizedString())" onfocus="this.placeholder = ''" onblur="this.placeholder = '@("PP.Register.PasswordPlaceholder".LocalizedString())'" id="regPassword">
     </div>
     <div class="group-input">
-        <label for="pass">@("PP.Register.ConfirmPassword".LocalizedString()) <span class="text-danger">*</span></label>
+        <label for="pass" class="login-titel" style="font-size: 13px">@("PP.Register.ConfirmPassword".LocalizedString()) <span class="text-danger">*</span></label>
         <input type="password" class="form-control" name="ConfirmPassword" placeholder="@("PP.Register.ConfirmPasswordPlaceholder".LocalizedString())" onfocus="this.placeholder = ''" onblur="this.placeholder = '@("PP.Register.ConfirmPasswordPlaceholder".LocalizedString())'">
     </div>
     <div class="group-input errorsRow" style="display:none">
         <div class="alert alert-danger errorMessages mb-0" role="alert"></div>
     </div>
-    <button type="submit" id="registerButton" class="site-btn login-btn">@("PP.Register.RegisterAccount".LocalizedString())</button>
+    <button type="submit" id="registerButton" class="site-btn login-btn mt-3">@("PP.Register.RegisterAccount".LocalizedString())</button>
 </form>
 
 <script>
