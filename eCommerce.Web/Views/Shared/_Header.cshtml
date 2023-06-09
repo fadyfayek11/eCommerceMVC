@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNet.Identity
 
 <header class="header-section">
-    <div class="header-top">
+    <div class="header-top" style="margin-top: 4%;margin-bottom: 3%;">
         <div class="container">
             <div class="ht-left">
                 @if (!string.IsNullOrEmpty(ConfigurationsHelper.Email))
@@ -33,8 +33,14 @@
                         </a>
                     </div>
                 </div>
-            }
+             }            
+               
+            
+
             <div class="ht-right">
+                <a href="/ar">
+                    <img src="/logo.png" style="max-width:50%;margin-top: -7%;" width="480">
+                </a>
                 @if (User.Identity.IsAuthenticated)
                 {
                     var hiUserMessage = "PP.Header.Menu.HiUser".LocalizedString().Replace("{user}", User.Identity.GetUserName());
@@ -68,7 +74,7 @@
                 else
                 {
                     <div class="login-panel login-panel-last">
-                        <a id="loginButton" @*href="@Url.Login()"*@ title="@("PP.Header.Menu.Account".Localized())">
+                        <a id="loginButton" class="pointerCursor" @*href="@Url.Login()"*@ title="@("PP.Header.Menu.Account".Localized())">
                             <i class="fas fa-user"></i>
                         </a>
                     </div>
@@ -139,15 +145,15 @@
         <div class="inner-header">
             <div class="row">
                 <div class="col-lg-3 col-md-3">
-                    <div class="logo">
+                    <!--<div class="logo">
                         <a href="@Url.Home()">
-                            <h4>
+                            <h4>-->
                                 @* TODO: We should be able to localize the application name along with Logo *@
                                 @*@ConfigurationsHelper.ApplicationName*@
-                                <img src="~/logo.png" width="480" />
+                                <!--<img src="~/logo.png" width="480" />
                             </h4>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <form class="advanced-search" action="@Url.SearchProducts()">
@@ -164,7 +170,7 @@
                         <li class="cart-icon cartMenu">
                             <span class="pointerCursor">
                                 <a>
-                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-shopping-basket"></i>
                                     <span class="countholder">0</span>
                                 </a>
                                 <span class="cart-price ltr-dir" dir="ltr"></span>

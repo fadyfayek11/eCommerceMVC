@@ -5,7 +5,7 @@
     var i = 0;
     var j = 0;
 
-    <div id="carouselIndicators" class="home-slider-carousel carousel slide" data-ride="carousel">
+    <div id="carouselIndicators" class="home-slider-carousel carousel slide" data-ride="carousel" style="height: 70%;">
         @if (Model.SlidersConfigurations.Count > 1)
         {
             <ol class="carousel-indicators home-carousel-indicators">
@@ -47,7 +47,7 @@
                 <div class="carousel-item text-center @(j == 0 ? "active" : string.Empty)">
                     @Html.Picture(img, classes: "img-fluid", alt: "Slider")
 
-                    @if (!string.IsNullOrEmpty(topHeading) || !string.IsNullOrEmpty(paragraph) || !string.IsNullOrEmpty(link))
+                    @*@if (!string.IsNullOrEmpty(topHeading) || !string.IsNullOrEmpty(paragraph) || !string.IsNullOrEmpty(link))
                     {
                         <div class="carousel-caption">
                             <a href="@link.IfNullOrEmptyShowAlternative("#")">
@@ -55,7 +55,7 @@
                                 <p>@paragraph</p>
                             </a>
                         </div>
-                    }
+                    }*@
                 </div>
 
                 j++;

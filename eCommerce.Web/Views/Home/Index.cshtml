@@ -9,7 +9,7 @@
         Model.PageImageURL = PictureHelper.PageImageURL("home.jpg");
     }
 
-    //Html.RenderAction("HomeSliders", "Home");
+    Html.RenderAction("HomeSliders", "Home");
     Html.RenderAction("FeaturedCategories", "Categories", new { recordSize = 1000, isForHomePage = true });
     //Html.RenderAction("ProductsByFeaturedCategories", "Categories", new { recordSize = 3 });
 }
