@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace eCommerce.Web.Controllers
 {
-    [Authorize]
+    
     public class ProductsController : PublicBaseController
     {
         //[OutputCache(Duration = 1000, VaryByParam = "productID;pageSize")]

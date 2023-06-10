@@ -38,7 +38,7 @@ namespace eCommerce.Shared.Helpers
             if (lazyLoad)
             {
                 image.MergeAttribute("data-src", string.Format("{0}{1}", eCommerceConstants.MAIN_IMAGES_DIRECTORY, pictureURL));
-                image.MergeAttribute("src", string.Format("{0}{1}", eCommerceConstants.MAIN_IMAGES_DIRECTORY, eCommerceConstants.LOADING_PICTURE));
+                image.MergeAttribute("src", string.Format("{0}{1}", eCommerceConstants.MAIN_IMAGES_DIRECTORY, eCommerceConstants.DEFAULT_PICTURE));
             }
             else
             {
@@ -184,7 +184,7 @@ namespace eCommerce.Shared.Helpers
             if (lazyLoad)
             {
                 image.MergeAttribute("data-src", string.Format("{0}{1}", eCommerceConstants.MAIN_IMAGES_DIRECTORY, thumbnail));
-                image.MergeAttribute("src", string.Format("{0}{1}", eCommerceConstants.MAIN_IMAGES_DIRECTORY, eCommerceConstants.LOADING_PICTURE));
+                image.MergeAttribute("src", string.Format("{0}{1}", eCommerceConstants.MAIN_IMAGES_DIRECTORY, eCommerceConstants.DEFAULT_PICTURE));
             }
             else
             {

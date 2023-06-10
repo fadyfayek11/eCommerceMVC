@@ -1251,6 +1251,7 @@ forward Banner Section
 .outofstock:before {
 	content: "";
 	background: rgba(255,255,255,0.5);
+	color: white;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -1261,16 +1262,44 @@ forward Banner Section
 .outofstock:after {
 	content: "OUT OF STOCK";
 	position: absolute;
-	background: rgba(255, 255, 255, 0.9);
+	background: rgba(0,0,0);
+	color: white;
 	border-radius: 100%;
 	text-align: center;
-	width: 70px;
-	height: 70px;
+	width: 80px;
+	height: 80px;
 	top: calc(50% - 35px);
 	left: calc(50% - 35px);
 	font-size: 0.8em;
 	font-weight: bold;
 	display: flex;
+	align-items: center;
+}
+.newstock:before {
+	content: "";
+	background: rgba(255,255,255,0.5);
+	color: white;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.newstock:after {
+	content: "NEW";
+	position: absolute;
+	background: rgba(0, 0, 0, 0.81);
+	color: white;
+	border-radius: 100%;
+	text-align: center;
+	width: 70px;
+	height: 70px;
+	top: calc(19% - 35px);
+	left: calc(78% - 35px);
+	font-size: 1.8em;
+	font-weight: bold;
+	display: grid;
 	align-items: center;
 }
 
@@ -2604,7 +2633,7 @@ Product Details
 }
 
 .product-content {
-	overflow: scroll;
+	border-bottom: 1px solid #00000021;
 }
 
 .product-content h5 {
@@ -4732,7 +4761,7 @@ Register Form
 }
 
 .home-slider-carousel img {
-	max-width: 100%;
+	width: 100%;
 	vertical-align: middle;
 	border-style: none;
 	/*max-height: 100%;*/

@@ -14,7 +14,7 @@
             <div class="container-fluid px-0">
                 <div class="row">
                     <div class="col-lg-4" title="@("PP.Home.FeaturedCategories.BrowseCategoryProducts".LocalizedString().Replace("{category}", currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty))">
-                        <div class="product-large set-bg d-flex justify-content-center align-items-center" data-setbg="@Html.PictureSource(picture: featuredCategory.Picture, defaultPic: "site/default-bg.jpg")">
+                        <div class="product-large set-bg d-flex justify-content-center align-items-center" style="background-color:black" data-setbg="@Html.PictureSource(picture: featuredCategory.Picture, defaultPic: "site/default-bg.jpg")">
                             <div>
                                 <h2>
                                     @(currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty)

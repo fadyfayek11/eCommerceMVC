@@ -10,8 +10,9 @@
     }
 
     Html.RenderAction("HomeSliders", "Home");
-    Html.RenderAction("FeaturedCategories", "Categories", new { recordSize = 1000, isForHomePage = true });
-    //Html.RenderAction("ProductsByFeaturedCategories", "Categories", new { recordSize = 3 });
+    Html.RenderAction("RecentProducts", "Products", new { pageSize = 4 });
+    //Html.RenderAction("FeaturedCategories", "Categories", new { recordSize = 1000, isForHomePage = true });
+    Html.RenderAction("ProductsByFeaturedCategories", "Categories", new { recordSize = 3 });
 }
 
 @*<div class="container-fluid my-4 pb-4">

@@ -5,12 +5,12 @@
 @if (Model.Products != null && Model.Products.Count > 0)
 {
     <section class="section-margin--small calc-60px">
-        <div class="container">
-            <div class="section-intro pb-60px">
-                <p>@ConfigurationsHelper.ApplicationName's</p>
-                <h2>Latest <span class="section-intro__style">Products</span></h2>
-            </div>
-            <div class="owl-carousel owl-theme" id="bestSellerCarousel">
+        <div class="section-intro pb-60px">
+            @*<p>@ConfigurationsHelper.ApplicationName's</p>*@
+            <h2 style="text-align: center;background-color: #100100;color: white;margin-top: 1%;font-size: 25px;padding: 7px;">Latest <span class="section-intro__style">Products</span></h2>
+        </div>
+        <div class="container" style="margin-top:1%">
+            <div class="row col-12">
                 @foreach (var product in Model.Products)
                 {
                     var thumbnail = new Picture();
@@ -22,31 +22,33 @@
                         thumbnail = selectedThumbnail != null ? selectedThumbnail.Picture : product.ProductPictures.FirstOrDefault().Picture;
                     }
 
-                    <div class="card text-center card-product">
-                        <div class="card-product__img">
+                    <div class="col-lg-3 col-md-6 col-sm-12 product-item">
+                        <div class="pi-pic">
                             <a href="@Url.ProductDetails(product.Category.SanitizedName, product.ID,productTypeID: product.ProductTypes.FirstOrDefault().ID)">
-                                @Html.Picture(thumbnail, "card-img", alt: product.Name)
+                                @Html.Picture(thumbnail, "card-img", alt: product.ThumbnailPictureID.ToString())
+                                <div class="newstock"></div>
                             </a>
-                            <ul class="card-product__imgOverlay">
+                            <ul class="itemCartHolder">
                                 <li><button class="link-button" data-href="@Url.ProductDetails(product.Category.SanitizedName, product.ID,productTypeID: product.ProductTypes.FirstOrDefault().ID)"><i class="fas fa-link"></i></button></li>
                                 <li><button class="btnAddToCart" data-id="@product.ID"><i class="fas fa-shopping-basket"></i></button></li>
                             </ul>
                         </div>
-                        <div class="card-body">
-                            <a href="@Url.SearchProducts(product.Category.SanitizedName)" class="card-link">
-                                @product.Category.Name
+                        <div class="pi-text">
+                            <a href="@Url.SearchProducts(product.Category.SanitizedName)" class="catagory-name">
+                                @product.Category.SanitizedName.ToString()
                             </a>
                             <h4 class="card-product__title">
                                 <a href="@Url.ProductDetails(product.Category.SanitizedName, product.ID,productTypeID: product.ProductTypes.FirstOrDefault().ID)">
-                                    @product.Name
+                                    @product.Category.SanitizedName.ToString()
                                 </a>
                             </h4>
                             <p class="card-product__price ltr-dir">
                                 @product.ProductTypes.FirstOrDefault().Price.WithCurrency()
                             </p>
                         </div>
-                    </div>
-                }
+                 </div>
+                 }
+                <div style="background-color: #00000017; height: 2px; width: 100%;margin-bottom:5%"></div>
             </div>
         </div>
     </section>
