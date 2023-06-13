@@ -190,10 +190,10 @@
     </div>
     <div class="nav-item">
         <div class="container">
-            @{ Html.RenderAction("CategoriesMenu", "Categories"); }
+            @{ Html.RenderAction("CategoriesMenu", "Categories");}
             <nav class="nav-menu mobile-menu">
                 <ul>
-                    @if (!User.IsInRole("Guest"))
+                    @if (User.Identity.IsAuthenticated && !User.IsInRole("Guest"))
                     {
                         <li class="@Html.MenuItemClass("Home", "Index")"><a href="@Url.Home()">@("PP.Header.Menu.Home".Localized())</a></li>
                         <li class="@Html.MenuItemClass("Home", "Search")"><a href="@Url.SearchProducts()">@("PP.Header.Menu.Products".Localized())</a></li>
@@ -202,6 +202,16 @@
                         <li class="@Html.MenuItemClass("Cart", "Cart")"><a href="@Url.Cart()">@("PP.Header.Menu.ShoppingCart".Localized())</a></li>
                         <li class="@Html.MenuItemClass("Cart", "Checkout")"><a href="@Url.Checkout()">@("PP.Header.Menu.Checkout".Localized())</a></li>
                         <li class="@Html.MenuItemClass("Profile", "Orders")"><a href="@Url.UserProfile("orders")">@("PP.UserProfile.Orders".Localized())</a></li>
+                    }
+                    else if (!User.IsInRole("Guest"))
+                    {
+                        <li  class="@Html.MenuItemClass("Home", "Index") "><a href="@Url.Home()">@("PP.Header.Menu.Home".Localized())</a></li>
+                        <li  class="@Html.MenuItemClass("Home", "Search") "><a href="@Url.SearchProducts()">@("PP.Header.Menu.Products".Localized())</a></li>
+                        <li  class="@Html.MenuItemClass("Home", "Discount") "><a href="@Url.DiscountProducts()">@("PP.Header.Menu.Discount".Localized())</a></li>
+                        <li  class="@Html.MenuItemClass("Orders", "Tracking") unauthorized"><a href="@Url.OrderTrack()">@("PP.Header.Menu.Tracking".Localized())</a></li>
+                        <li  class="@Html.MenuItemClass("Cart", "Cart") "><a href="@Url.Cart()">@("PP.Header.Menu.ShoppingCart".Localized())</a></li>
+                        <li  class="@Html.MenuItemClass("Cart", "Checkout") unauthorized"><a href="@Url.Checkout()">@("PP.Header.Menu.Checkout".Localized())</a></li>
+                        <li  class="@Html.MenuItemClass("Profile", "Orders") unauthorized"><a href="@Url.UserProfile("orders")">@("PP.UserProfile.Orders".Localized())</a></li>
                     }
                     else
                     {
@@ -233,6 +243,13 @@
 <script>
     $(document).ready(function () {        
         $('#loginButton').click(function () {
+            $.get('/Users/LoginRegisterPartial', function (data) {
+                $('#loginRegisterPopup').html(data);
+                $('#loginModal').modal("show"); // Display the popup
+            });
+        });
+        $('.unauthorized').click(function () {
+            event.preventDefault(); 
             $.get('/Users/LoginRegisterPartial', function (data) {
                 $('#loginRegisterPopup').html(data);
                 $('#loginModal').modal("show"); // Display the popup

@@ -33,12 +33,12 @@
     validateLoginForm();
 
     $("#loginForm").submit(function (e) {
-        submitForm();
+        submitLoginForm();
 
         e.preventDefault();
     });
 
-    function submitForm() {
+    function submitLoginForm() {
         $(".errorsRow .errorMessages", "#loginForm").html("");
         $(".errorsRow", "#loginForm").hide(200);
         $(".errorsRow .errorMessages", "#loginForm").hide();

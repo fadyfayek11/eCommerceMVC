@@ -13,7 +13,17 @@
             <div class="row col-12">
                 @foreach (var product in Model.Products)
                 {
-                    var thumbnail = new Picture();
+                    var currentLanguageProductRecord = product.ProductRecords.FirstOrDefault(x => x.LanguageID == AppDataHelper.CurrentLanguage.ID);
+
+                    var currentLanguageProductCategoryRecord = product.Category.CategoryRecords.FirstOrDefault(x => x.LanguageID == AppDataHelper.CurrentLanguage.ID);
+
+                    var sanitizedSEOTitle = AppDataHelper.CurrentLanguage.ShortCode == LanguagesHelper.EnglishLanguageShortCode && currentLanguageProductRecord != null ? currentLanguageProductRecord.Name.SanitizeLowerString() : string.Empty;
+
+                    var detailsLink = Url.ProductDetails(category: product.Category.SanitizedName, ID: product.ID, sanitizedtitle: sanitizedSEOTitle, productTypeID: product.ProductTypes.FirstOrDefault().ID);
+
+                    var productPrice = product.ProductTypes.FirstOrDefault().Discount.HasValue && product.ProductTypes.FirstOrDefault().Discount.Value > 0 ? product.ProductTypes.FirstOrDefault().Discount.Value : product.ProductTypes.FirstOrDefault().Price;
+
+                    var thumbnail = PictureHelper.GetProductThumbnail(product.ProductPictures, product.ThumbnailPictureID) ?? null;
 
                     if (product.ProductPictures != null && product.ProductPictures.Count > 0)
                     {
@@ -29,19 +39,22 @@
                                 <div class="newstock"></div>
                             </a>
                             <ul class="itemCartHolder">
-                                <li><button class="link-button" data-href="@Url.ProductDetails(product.Category.SanitizedName, product.ID,productTypeID: product.ProductTypes.FirstOrDefault().ID)"><i class="fas fa-link"></i></button></li>
-                                <li><button class="btnAddToCart" data-id="@product.ID"><i class="fas fa-shopping-basket"></i></button></li>
+
+                                <li class="w-icon active"><a href="@detailsLink" title="@("PP.Shopping.ViewProduct".Localized())"><i class="fas fa-eye"></i></a></li>
+
+                                @if (product.ProductTypes.FirstOrDefault().StockQuantity > 0)
+                                {
+                                    <li class="w-icon active"><a title="@("PP.Shopping.AddToCart".Localized())" data-id="@product.ID" data-price="@product.ProductTypes.FirstOrDefault().Price" class="pointerCursor btnAddToCart"><i class="fas fa-cart-plus"></i></a></li>
+                                }
                             </ul>
                         </div>
                         <div class="pi-text">
                             <a href="@Url.SearchProducts(product.Category.SanitizedName)" class="catagory-name">
                                 @product.Category.SanitizedName.ToString()
                             </a>
-                            <h4 class="card-product__title">
-                                <a href="@Url.ProductDetails(product.Category.SanitizedName, product.ID,productTypeID: product.ProductTypes.FirstOrDefault().ID)">
-                                    @product.Category.SanitizedName.ToString()
-                                </a>
-                            </h4>
+                            <h5 class="card-product__title">                                
+                                   @(currentLanguageProductRecord != null ? currentLanguageProductRecord.Name : string.Empty)                                
+                            </h5>
                             <p class="card-product__price ltr-dir">
                                 @product.ProductTypes.FirstOrDefault().Price.WithCurrency()
                             </p>

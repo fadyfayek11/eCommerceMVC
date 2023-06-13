@@ -53,12 +53,12 @@
     validateRegisterForm();
 
     $("#registerForm").submit(function (e) {
-        submitForm();
+        submitRegisterForm();
 
         e.preventDefault();
     });
 
-    function submitForm() {
+    function submitRegisterForm() {
         $(".errorsRow .errorMessages", "#registerForm").html("");
         $(".errorsRow", "#registerForm").hide(200);
         $(".errorsRow .errorMessages", "#registerForm").hide();

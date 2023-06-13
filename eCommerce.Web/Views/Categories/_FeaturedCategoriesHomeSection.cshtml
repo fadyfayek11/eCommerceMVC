@@ -1,35 +1,132 @@
 ﻿@model List<eCommerce.Entities.Category>
+
 <style>
     style {
         width: 100% !important;
         height: 100% !important;
     }
 </style>
+@*@if (Model != null && Model.Count > 0)
+    {
+        <div class="banner-section spad">
+            <div class="container-fluid">
+                <div class="row">
+                    @foreach (var category in Model)
+                    {
+                        var currentLanguageCategoryRecord = category.CategoryRecords.FirstOrDefault(x => x.LanguageID == AppDataHelper.CurrentLanguage.ID);
+
+                        <div class="col-lg-4" style="margin-bottom:10px">
+                            <a class="inner-text" style="align-items: center;" href="@Url.SearchProducts(category: category.SanitizedName)">
+                                <div class="single-banner d-flex align-items-center imgsb" title="@("PP.Home.FeaturedCategories.BrowseCategoryProducts".LocalizedString().Replace("{category}",currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty))">
+                                    @Html.Picture(
+                                                            picture: category.Picture, defaultPic: "site/default-bg.jpg", width: "100%",
+                                                            alt: currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty,
+                                                            style: "width:100%;height:100%"
+                                                            )
+                                </div>
+                                <h4>
+                                    @(currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty)
+                                </h4>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>}*@
+<!--End-->
 @if (Model != null && Model.Count > 0)
 {
-    <div class="banner-section spad">
-        <div class="container-fluid">
-            <div class="row">
-                @foreach (var category in Model)
-                {
-                    var currentLanguageCategoryRecord = category.CategoryRecords.FirstOrDefault(x => x.LanguageID == AppDataHelper.CurrentLanguage.ID);
+    var i = 0;
+    var j = 0;
+    var z = 0;
 
-                    <div class="col-lg-4" style="margin-bottom:10px">
-                        <a class="inner-text" style="align-items: center;" href="@Url.SearchProducts(category: category.SanitizedName)">
-                        <div class="single-banner d-flex align-items-center imgsb" title="@("PP.Home.FeaturedCategories.BrowseCategoryProducts".LocalizedString().Replace("{category}",currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty))">
-                            @Html.Picture(
-                           picture:category.Picture,defaultPic: "site/default-bg.jpg", width:"100%",
-                           alt: currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty,
-                           style:"width:100%;height:100%"
-                           )
+    <div class="container mb-5">
+        <div class="row col-12">
+            <div class="col-lg-6 col-sm-12 mb-2">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        @foreach (var slider in Model.Take(Model.Count() / 2))
+                        {
+                            <li data-target="#carouselExampleIndicators" data-slide-to="@i" class="@(i == 0 ? "active" : string.Empty)"></li>
+
+                            i++;
+                        }
+                    </ol>
+                    @{i = 0;}
+                    <div class="carousel-inner">
+                        <div class="carousel-inner">
+                            @foreach (var category in Model.Take(Model.Count() / 2))
+                            {
+                                var currentLanguageCategoryRecord = category.CategoryRecords.FirstOrDefault(x => x.LanguageID == AppDataHelper.CurrentLanguage.ID);
+
+                                <div class="@(i == 0 ? "active" : string.Empty) carousel-item">
+                                    @Html.Picture(
+                                                                picture: category.Picture, defaultPic: "site/default-bg.jpg", width: "100%",
+                                                                alt: currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty,
+                                                                style: "width:100%;height:100%"
+                                                                )
+                                    <div class="carousel-caption d-none d-md-block" style="background-color: #fff0; color: #000000a8">
+                                        <h5> @(currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty) </h5>
+                                    </div>
+                                </div>
+                                i++;
+                            }
                         </div>
-                            <h4>
-                                @(currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty)
-                            </h4>
-                        </a>
                     </div>
-                }
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-2">
+                <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        @foreach (var slider in Model.Skip(Model.Count() / 2))
+                        {
+                            <li data-target="#carouselExampleIndicator" data-slide-to="@j" class="@(j == 0 ? "active" : string.Empty)"></li>
+
+                            j++;
+                        }
+                    </ol>
+
+                    @{j = 0;}
+                    <div class="carousel-inner">
+                        <div class="carousel-inner">
+                            @foreach (var category in Model.Skip(Model.Count() / 2))
+                            {
+                                var currentLanguageCategoryRecord = category.CategoryRecords.FirstOrDefault(x => x.LanguageID == AppDataHelper.CurrentLanguage.ID);
+
+                                <div class="@(j == 0 ? "active" : string.Empty) carousel-item">
+                                    @Html.Picture(
+                                                                picture: category.Picture, defaultPic: "site/default-bg.jpg", width: "100%",
+                                                                alt: currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty,
+                                                                style: "width:100%;height:100%"
+                                                                )
+                                    <div class="carousel-caption d-none d-md-block" style="background-color: #fff0; color: #000000a8">
+                                        <h5> @(currentLanguageCategoryRecord != null ? currentLanguageCategoryRecord.Name : string.Empty) </h5>
+                                    </div>
+                                </div>
+                                j++;
+                            }
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleIndicator" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicator" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-}<!--End-->
+
+}
