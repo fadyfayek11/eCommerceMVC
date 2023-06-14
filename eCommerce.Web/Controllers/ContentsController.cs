@@ -9,7 +9,6 @@ using System.Web.Mvc;
 
 namespace eCommerce.Web.Controllers
 {
-    [Authorize]
     public class ContentsController : PublicBaseController
     {
         public ActionResult AboutUs()

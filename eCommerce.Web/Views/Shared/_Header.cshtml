@@ -4,7 +4,11 @@
     <div class="header-top" style="margin-top: 4%;margin-bottom: 3%;">
         <div class="container">
             <div class="ht-left">
-                @if (!string.IsNullOrEmpty(ConfigurationsHelper.Email))
+                    <a href="@Url.SearchProducts()" class="text-dark m-2" style="text-decoration: none; font-weight: bold;">@("PP.Header.Menu.Products".Localized())</a>
+                    <a href="@Url.DiscountProducts()" class="text-dark m-2" style="text-decoration: none; font-weight: bold;">@("PP.Header.Menu.Discount".Localized())</a>
+                    <a href="@Url.StaticPage("AboutUs")" class="text-dark m-2" style="text-decoration: none; font-weight: bold;">@("PP.Footer.Information.AboutUs".Localized())</a>
+                    <a href="@Url.StaticPage("ContactUs")" class="text-dark m-2" style="text-decoration: none; font-weight: bold;">@("PP.Footer.Information.ContactUs".Localized())</a>
+                @*@if (!string.IsNullOrEmpty(ConfigurationsHelper.Email))
                 {
                     <div class="mail-service">
                         <i class="fas fa-envelope"></i>
@@ -21,9 +25,9 @@
                             @ConfigurationsHelper.PhoneNumber
                         </a>
                     </div>
-                }
+                }*@
             </div>
-            @if (AppDataHelper.IsMobile && !string.IsNullOrEmpty(ConfigurationsHelper.PhoneNumber))
+            @*@if (AppDataHelper.IsMobile && !string.IsNullOrEmpty(ConfigurationsHelper.PhoneNumber))
             {
                 <div class="d-sm-block d-md-none" style="display:inline-block; margin-top: 6px">
                     <div class="phone-service">
@@ -33,7 +37,7 @@
                         </a>
                     </div>
                 </div>
-             }            
+             }*@            
                
             
 

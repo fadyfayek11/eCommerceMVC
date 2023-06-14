@@ -38,11 +38,11 @@ else
 
 @if (!string.IsNullOrEmpty(ConfigurationsHelper.WhatsAppNumber))
 {
-    <a href="https://wa.me/@ConfigurationsHelper.WhatsAppNumber" class="whatsapp-floater" target="_blank">
+    <a href="https://wa.me/@ConfigurationsHelper.WhatsAppNumber" class="whatsapp-floater" target="_blank" style="width: 40px;height: 40px;font-size: 25px;align-content: initial;">
         <i class="fab fa-whatsapp whatsapp-float-icon"></i>
     </a>
 }
 
-<a id="changeMode" class="pointerCursor mode-floater" title="@(SessionHelper.DarkMode.Equals("true") ? ("PP.Header.Menu.DisableDarkMode".Localized()) : ("PP.Header.Menu.EnableDarkMode".Localized()))">
+<a id="changeMode" class="pointerCursor mode-floater" style="width: 40px;height: 40px;font-size: 25px;align-content: initial;" title="@(SessionHelper.DarkMode.Equals("true") ? ("PP.Header.Menu.DisableDarkMode".Localized()) : ("PP.Header.Menu.EnableDarkMode".Localized()))">
     <i class="fas fa-adjust mode-float-icon"></i>
 </a>

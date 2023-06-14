@@ -80,6 +80,22 @@ namespace eCommerce.Web.Controllers
             model.ProductTypeID = productTypeID;
             return View(model);
         }
+        
+        [HttpGet]
+        public ActionResult ProductDetails(int ID,int productTypeID, string category)
+        {
+            ProductDetailsViewModel model = new ProductDetailsViewModel
+            {
+                Product = ProductsService.Instance.GetProductByID(ID, activeOnly: false)
+            };
+
+            if (model.Product == null || !model.Product.Category.SanitizedName.ToLower().Equals(category))
+                return HttpNotFound();
+
+            model.Rating = CommentsService.Instance.GetProductRating(model.Product.ID);
+            model.ProductTypeID = productTypeID;
+            return PartialView("_ProductDetails", model);
+        }
 
     }
 }

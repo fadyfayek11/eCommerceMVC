@@ -72,8 +72,10 @@
                 data: $("#registerForm").serialize(),
             })
             .done(function (response) {
+                console.log(response)
                 if (response != null && response.Success) {
                     window.location.href = "@Url.Home()";
+                    Swal.fire("@("PP.Message.Success".Localized())", "@("PP.Register.Title".Localized())", "success");
                 }
                 else {
                     removeLoader("register-container");
@@ -85,7 +87,7 @@
              })
              .fail(function(jqXHR, textStatus, errorThrown) {
                  removeLoader("register-container");
-                 
+
                  Swal.fire("@("PP.Message.Error".Localized())", "@("PP.Message.GenericErrorMessage".Localized())", "error");
 
                  console.log('jqXHR:' + jqXHR);

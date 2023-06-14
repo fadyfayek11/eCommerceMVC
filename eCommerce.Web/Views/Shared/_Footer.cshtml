@@ -60,14 +60,31 @@
         }
     </style>
     <div class="copyright-reserved" style="display:block">
+        <div style="text-align:center">
+            <ul style="display:block ruby">
+                <li class="m-2" style="color: white;">
+                    <a href="@Url.SearchProducts()" style="text-decoration: none; color: white;">@("PP.Header.Menu.Products".Localized())</a>
+                </li>
+                <li class="m-2" style="color: white;">
+                    <a href="@Url.DiscountProducts()" style="text-decoration: none; color: white;">@("PP.Header.Menu.Discount".Localized())</a>
+                </li>
+
+                <li class="m-2" style="color: white;">
+                    <a href="@Url.StaticPage("AboutUs")" style="text-decoration: none; color: white;">@("PP.Footer.Information.AboutUs".Localized())</a>
+                </li>
+                <li class="m-2" style="color: white;">
+                    <a href="@Url.StaticPage("ContactUs")" style="text-decoration: none; color: white;">@("PP.Footer.Information.ContactUs".Localized())</a>
+                </li>
+            </ul>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 copyrights-widget">
+                <div class="col-lg-12 copyrights-widget">               
                     <div class="copyright-text">
                         <i title="Copyrights" class="fas fa-copyright dont-transform text-warning"></i>
                         @Html.Raw("PP.Footer.CopyrightsMessage".LocalizedString().Replace("{application}", "<a href='" + Url.Home() + "'>" + ConfigurationsHelper.ApplicationName + "</a>").Replace("{date}", DateTime.Now.Year.ToString()))
-                
-                      
+
+
                     </div>
                     <div class="payment-pic text-white">
                         <img src="~/Content/images/site/ecommerce-payment-methods.png" />

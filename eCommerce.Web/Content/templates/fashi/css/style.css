@@ -141,6 +141,7 @@ ol {
 .spad {
 	padding-top: 50px;
 	padding-bottom: 50px;
+	min-height: 60%;
 }
 
 .text-white h1,
@@ -353,6 +354,7 @@ ol {
 
 	.header-top .ht-left {
 		float: left;
+		margin-left:-60px;
 	}
 
 		.header-top .ht-left .mail-service {
@@ -1661,7 +1663,6 @@ ol {
 
 .footer-section {
 	background: #191919;
-	padding-top: 75px;
 }
 
 .footer-left {
@@ -1830,7 +1831,7 @@ ol {
 		}
 
 		.copyright-reserved .copyright-text a:hover {
-			color: #140100;
+			color: white;
 		}
 
 	.copyright-reserved .payment-pic {
@@ -4895,11 +4896,11 @@ ol {
 	.carousel-caption h5 {
 		font-size: 25px;
 		padding-bottom: 20px;
-		color: #fff;
+		color: #000000a3;
 	}
 
 	.carousel-caption p {
-		color: #fff;
+		color: #000000a3;
 	}
 
 /*.whatsapp-floater {
@@ -4936,7 +4937,7 @@ ol {
 }
 
 .whatsapp-float-icon {
-	margin-top: 16px;
+	margin-top: 8px;
 }
 
 /*.mode-floater {
@@ -4973,5 +4974,5 @@ ol {
 }
 
 .mode-float-icon {
-	margin-top: 16px;
+	margin-top: 8px;
 }

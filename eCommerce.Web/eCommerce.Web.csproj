@@ -4759,6 +4759,7 @@
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Views\Orders\_Details.cshtml" />
     <Content Include="Views\Users\_LoginRegisterPartial.cshtml" />
+    <Content Include="Views\Products\_ProductDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Data\eCommerce.Data.csproj">

@@ -45,7 +45,7 @@
                 <input type="hidden" name="from" value="@(priceStartFrom > priceRangeMin ? string.Format("{0}", priceStartFrom) : "")" @(priceStartFrom > priceRangeMin ? string.Empty : "disabled=disabled")>
                 <input type="hidden" name="to" value="@(priceStartTo < priceRangeMax ? string.Format("{0}", priceStartTo) : "")" @(priceStartTo < priceRangeMax ? string.Empty : "disabled=disabled")>
                 <button type="submit" class="filter-btn">@("PP.Search.Filter".LocalizedString())</button>
-                <a href="@Url.SearchProducts()" class="filter-btn">@("PP.Search.Reset".LocalizedString())</a>
+                <a href="@Url.SearchProducts()" class="filter-btn mt-2">@("PP.Search.Reset".LocalizedString())</a>
             </form>
         </div>
     </div>

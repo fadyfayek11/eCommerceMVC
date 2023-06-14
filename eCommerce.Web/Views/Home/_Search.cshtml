@@ -17,7 +17,7 @@
 
                 var sanitizedSEOTitle = AppDataHelper.CurrentLanguage.ShortCode == LanguagesHelper.EnglishLanguageShortCode && currentLanguageProductRecord != null ? currentLanguageProductRecord.Name.SanitizeLowerString() : string.Empty;
 
-                var detailsLink = Url.ProductDetails(category: product.Category.SanitizedName, ID: product.ID, sanitizedtitle: sanitizedSEOTitle,productTypeID: product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).ID);
+                var detailsLink = Url.ProductDetails(category: product.Category.SanitizedName, ID: product.ID, sanitizedtitle: sanitizedSEOTitle, productTypeID: product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).ID);
 
                 var productPrice = product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).Discount.HasValue && product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).Discount.Value > 0 ? product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).Discount.Value : product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).Price;
 
@@ -25,25 +25,26 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
-                        <div class="pi-pic" data-href="@detailsLink">
+                        <div class="pi-pic">
                             @if (product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).StockQuantity == 0)
                             {
                                 <div class="outofstock"></div>
                             }
-
-                            @Html.Thumbnail(picture: thumbnail, targetSize: 160, seoTitle: sanitizedSEOTitle, classes: "m-auto", alt: currentLanguageProductRecord != null ? currentLanguageProductRecord.Name : string.Empty)
+                            <a href="@Url.ProductDetails(product.Category.SanitizedName, product.ID,productTypeID: product.ProductTypes.FirstOrDefault().ID)">
+                                @Html.Thumbnail(picture: thumbnail, targetSize: 130, seoTitle: sanitizedSEOTitle, classes: "m-auto", alt: currentLanguageProductRecord != null ? currentLanguageProductRecord.Name : string.Empty)
+                            </a>
                             @if (product.isFeatured)
                             {
                                 <div class="featured">
                                     @("PP.Search.Products.Featured".Localized())
                                 </div>
                             }
-                        <ul class="itemCartHolder">
-                            <li class="w-icon active"><a href="@detailsLink" title="@("PP.Shopping.ViewProduct".Localized())"><i class="fas fa-eye"></i></a></li>
-                            @if (product.ProductTypes.FirstOrDefault().StockQuantity > 0 && !User.IsInRole("Guest"))
-                            {
-                                <li class="w-icon active"><a title="@("PP.Shopping.AddToCart".Localized())" data-id="@product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).ID" data-price="@product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).Price" class="pointerCursor btnAddToCart"><i class="fas fa-cart-plus"></i></a></li>
-                            }
+                            <ul class="itemCartHolder">
+                                <li class="w-icon active"><a onclick="showDetails(@product.ID, @product.ProductTypes.FirstOrDefault().ID, '@product.Category.SanitizedName')" @*href="@detailsLink"*@ title="@("PP.Shopping.ViewProduct".Localized())"><i class="fas fa-eye"></i></a></li>
+                                @if (product.ProductTypes.FirstOrDefault().StockQuantity > 0 && !User.IsInRole("Guest"))
+                                {
+                                    <li class="w-icon active"><a title="@("PP.Shopping.AddToCart".Localized())" data-id="@product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).ID" data-price="@product.ProductTypes.FirstOrDefault(_ => !_.IsDeleted).Price" class="pointerCursor btnAddToCart"><i class="fas fa-cart-plus"></i></a></li>
+                                }
                             </ul>
                         </div>
                         <div class="pi-text">
@@ -60,12 +61,12 @@
                                     @productPrice.WithCurrency()
                                 </div>
                             }
-                                <a href="@detailsLink">
-                                    <h5>
-                                        @(currentLanguageProductRecord != null ? currentLanguageProductRecord.Name : string.Empty)
-                                    </h5>
-                                </a>
-                            </div>
+                            <a href="@detailsLink">
+                                <h5>
+                                    @(currentLanguageProductRecord != null ? currentLanguageProductRecord.Name : string.Empty)
+                                </h5>
+                            </a>
+                        </div>
                     </div>
                 </div>
             }
@@ -138,3 +139,24 @@ else
         @("PP.Search.ProductsNotFound".Localized())
     </div>
 }
+<!-- Product details Modal Popup HTML -->
+<div id="productDetailsModal" class="modal fade">
+    <div class="modal-dialog modal-lg" style="margin-top: 5%;max-width: 950px">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="productDetailsPopup"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to show the modal popup on button click -->
+<script>
+
+    function showDetails(ID, productTypeID, category) {
+        $.get('/Products/ProductDetails', { ID: ID, productTypeID: productTypeID, category: category }, function (data) {
+            $('#productDetailsPopup').html(data);
+            $('#productDetailsModal').modal("show"); // Display the popup
+        });
+    }
+</script>
